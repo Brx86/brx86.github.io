@@ -6,5 +6,7 @@
 - [爬虫库requests_html踩坑笔记](5-requests_html)
 - [使用python批量处理ssh日志](6-pyssh)
 - [Github反向代理](8.github.md)
+- [Arch系配置代理最简方法](9-v2raya)
+- [使用AutoKey在Vscode-QQ快速发送图片](10-vscodeqq)
 - **Links**
 - [![Github](assets/img/github.svg)Github](https://github.com/brx86)

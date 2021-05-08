@@ -16,6 +16,17 @@ HostKey + Home
 chsh -s /bin/zsh  
 ```
 
+**尝试登录失败三次被锁定，立即解锁**
+```bash
+faillock --reset --user <username>
+```
+
+**arch下解压zip文件名乱码**
+```shell
+sudo pacman -S unzip-iconv
+unzip -O gbk file.zip
+```
+
 **yay省略参数**
 ```shell
 yay --nodiffmenu --nocleanmenu --editmenu --editor nano --save
