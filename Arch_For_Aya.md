@@ -4,7 +4,6 @@
 
 ```
 nano /etc/pacman.d/mirrorlist
-Server = https://mirrors.huaweicloud.com/archlinux/$repo/os/$arch
 ```
 
 第一行改成
