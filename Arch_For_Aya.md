@@ -63,6 +63,7 @@ nano /etc/locale.gen
 反注释en_US与zh_CN
 
 > en_US.UTF-8 UTF-8
+
 > zh_CN.UTF-8 UTF-8
 
 生成语言
