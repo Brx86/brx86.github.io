@@ -1,6 +1,4 @@
-# Arch安装笔记
-
-#### **编辑镜像站**
+##### **编辑镜像站**
 
 ```
 nano /etc/pacman.d/mirrorlist
@@ -9,58 +7,54 @@ nano /etc/pacman.d/mirrorlist
 第一行改成
 
 ```
-Server = https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch
+Server = https://mirrors.163.com/archlinux/$repo/os/$arch
 ```
 
-#### **分区-cfdisk**
+##### **分区-cfdisk**
 
 > /dev/sda
 >
-> └ sda1	300M	EFI
+> └ sda1	30M	EFI System
 >
-> └ sda2	30G	Linux Filesystem
->
-> └ sda3	100G	Linux Filesystem
+> └ sda2	50G	Linux Filesystem
 
-#### **格式化分区**
+##### **格式化分区**
 
 ```
 mkfs.vfat /dev/sda1
 
 mkfs.xfs /dev/sda2
-
-mkfs.xfs /dev/sda3
 ```
 
-#### **挂载分区**
+##### **挂载分区**
 
 ```
 mount /dev/sda2 /mnt
+
 mkdir -p /mnt/boot/efi
-mkdir /mnt/home
+
 mount /dev/sda1 /mnt/boot/efi
-mount /dev/sda3 /mnt/home
 ```
 
-#### **安装基本系统**
+##### **安装基本系统**
 
 ```
-pacstrap -i /mnt base base-devel linux linux-firmware nano
+pacstrap /mnt base base-devel linux linux-firmware nano
 ```
 
-#### **生成fstab**
+##### **生成fstab**
 
 ```
 genfstab -U /mnt > /mnt/etc/fstab
 ```
 
-#### **arch-chroot进入新系统**
+##### **arch-chroot进入新系统**
 
 ```
 arch-chroot /mnt
 ```
 
-#### **设置语言**
+##### **设置语言**
 
 ```
 nano /etc/locale.gen
@@ -76,31 +70,26 @@ nano /etc/locale.gen
 ```
 locale-gen
 ```
+
 修改locale.conf
 
 ```
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 ```
 
-#### 设置时区与utc时间
+##### 设置时区与utc时间
 
 ```
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc --utc
 ```
 
-#### **安装与配置grub引导**
 
-```
-pacman -S grub efibootmgr dosfstools intel-ucode
-grub-install --target=x86_64-efi --efi-directory=/boot/efi
-grub-mkconfig -o /boot/grub/grub.cfg
-```
-
-#### **新建用户**
+##### **新建用户**并设置为管理员
 
 ```
 useradd -m -G wheel aya
+echo '%wheel ALL=(ALL) ALL' >> /etc/sudoers
 ```
 
 设置密码
@@ -109,17 +98,31 @@ useradd -m -G wheel aya
 passwd aya
 ```
 
-**安装intel核显与触摸板驱动**
+##### 安装intel核显与触摸板驱动
 
 ```
 pacman -S xf86-video-intel xf86-input-synaptics
 ```
 
-安装X窗口与桌面环境
+##### 安装xfce与网络/音频相关包
+
+```bash
+pacman -S xorg xfce4 xfce4-goodies lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings 
+pacman -S pulseaudio pulseaudio-alsa pavucontrol dhcpcd networkmanager
+systemctl enable lightdm
+systemctl enable NetworkManager
+```
+
+##### 安装与配置grub引导
 
 ```
-pacman -S xorg xfce4 xfce4-goodies
-echo "exec startxfce4" > /etc/X11/xinit/xinitrc
-exec startplasma-x11
+pacman -S grub efibootmgr os-prober dosfstools intel-ucode
+grub-install --efi-directory=/boot/efi
+grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+##### 重启
+```
+exit
+reboot
+```
