@@ -105,11 +105,20 @@ passwd aya
 pacman -S xf86-video-intel xf86-input-synaptics
 ```
 
-#### 安装xfce与网络/音频相关包
+#### 安装cinnamon与网络/音频相关包
+
+```
+pacman -S xorg cinnamon xfce4-terminal lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+pacman -S pulseaudio pulseaudio-alsa pavucontrol dhcpcd networkmanager
+systemctl enable lightdm
+systemctl enable NetworkManager
+```
+
+#### ~~安装xfce与网络/音频相关包（当前版本xfce有问题，不建议安装）~~
 
 ```bash
 pacman -S xorg xfce4 xfce4-goodies lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings 
-pacman -S pulseaudio pulseaudio-alsa pavucontrol dhcpcd networkmanager
+pacman -S pulseaudio pulseaudio-alsa pavucontrol dhcpcd network-manager-applet
 systemctl enable lightdm
 systemctl enable NetworkManager
 ```
