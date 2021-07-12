@@ -153,13 +153,11 @@ sudo pacman -S linux-headers virtualbox-host-modules-arch && sudo modprobe vboxd
 
 ```shell
 #生成软件包列表
-pacman -Qqen > packages-repository.txt
-pacman -Qqem > packages-AUR.txt
+pacman -Qqe > pack.txt
 #重新安装
-pacman --needed -S - < packages-repository.txt 
-cat packages-AUR.txt | xargs yaourt -S --needed --noconfirm
+yay --needed -S --noconfirm - < pack.txt 
 #清除多余包
-yaourt -R `pacman -Qdqt`
+yay -Yc
 ```
 
 **scrcpy投屏** 
