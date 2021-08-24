@@ -104,8 +104,9 @@ passwd aya
 ```
 pacman -S xf86-video-intel xf86-input-synaptics
 ```
+#### 桌面环境装一个就行
 
-#### 安装cinnamon与网络/音频相关包
+##### 1.安装cinnamon与网络/音频相关包
 
 ```
 pacman -S xorg cinnamon xfce4-terminal lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
@@ -114,7 +115,7 @@ systemctl enable lightdm
 systemctl enable NetworkManager
 ```
 
-#### ~~安装xfce与网络/音频相关包（当前版本xfce有问题，不建议安装）~~
+##### 2.安装xfce与网络/音频相关包
 
 ```bash
 pacman -S xorg xfce4 xfce4-goodies lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings 
