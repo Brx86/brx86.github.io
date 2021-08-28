@@ -10,4 +10,4 @@
 
 在链接前加上aya1.top，如
 
-`git clone https://github.com/ventoy/vtoyboot`
+`git clone http://aya1.top/https://github.com/ventoy/vtoyboot`
