@@ -8,7 +8,7 @@
 
 ## 使用方法：
 
-在链接前加上aya1.top，如
+在链接前加上`https://aya1.top`，如
 
 ```bash
 git clone https://aya1.top/https://github.com/ventoy/vtoyboot
