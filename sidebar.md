@@ -10,4 +10,4 @@
 - [使用AutoKey在Vscode-QQ快速发送图片](10-vscodeqq)
 - **Links**
 - [![Github](assets/img/github.svg)Github](https://github.com/brx86)
-- [zhullyb](https://zhullyb.top/)
+- [![zhullyb](assets/img/code.svg)zhullyb](https://zhullyb.top/)
