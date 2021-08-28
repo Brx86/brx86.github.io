@@ -1,11 +1,12 @@
 - [Arch安装手册](Arch_For_Aya)
+- [Aya反代服务](r)
 - [Aya的杂乱小本本](1-arch)
 - [Arch系安装并配置fcitx5输入法](2-fcitx5)
 - [随机返回Kemomimi酱图片的API](3-api)
 - [PHP随机图片API的实现](4-phpapi)
 - [爬虫库requests_html踩坑笔记](5-requests_html)
 - [使用python批量处理ssh日志](6-pyssh)
-- [Github反向代理](8.github.md)
+- [Github反向代理](8-github.md)
 - [Arch系配置代理最简方法](9-v2raya)
 - [使用AutoKey在Vscode-QQ快速发送图片](10-vscodeqq)
 - **Links**
