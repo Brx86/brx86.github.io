@@ -6,8 +6,8 @@
 
 [源码](https://gitlab.com/NickCao/experiments/-/blob/master/workers/r.js)可以在这里获取到。
 
-## **使用方法：**
+## 使用方法：
 
 在链接前加上aya1.top，如
 
-####  `https://aya1.top/https://github.com/zhullyb/`
+`git clone https://github.com/ventoy/vtoyboot.git`
