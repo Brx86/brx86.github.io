@@ -25,9 +25,11 @@ v2rayA实际界面如图所示：
    Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
    ```
 
-2. ### 安装v2rayA与xray-core
+2. ### 安装v2rayA与v2ray-core（或xray-core，二选一即可）
 
    ```bash
+   # 两条命令二选一
+   sudo pacman -Sy v2ray v2raya
    sudo pacman -Sy xray v2raya
    ```
 
