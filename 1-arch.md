@@ -21,6 +21,21 @@ chsh -s /bin/zsh
 faillock --reset --user <username>
 ```
 
+**git本地默认使用main分支**
+```
+#1.将代码上传到GitHub的默认main分支（新）
+1.git --version    #查看版本
+2.git config --global init.defaultBranch main   #git在2.28.0上，重新设置git默认分支为main
+
+#2.在执行提交操作即可
+1.git init       //工作空间创建.git文件夹（默认隐藏了该文件夹）
+2.git add .      //添加到暂存区
+3.git commit -m "你的提交注释注释"
+4.git remote add origin http://xxxxxxxxx.git   //本地仓库和远程github关联
+5.git pull --rebase origin main  //远程有readme.md，拉一下
+6.git push -u origin main        //代码合并
+```
+
 **arch下解压zip文件名乱码**
 ```shell
 sudo pacman -S unzip-iconv
