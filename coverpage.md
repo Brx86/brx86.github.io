@@ -4,6 +4,5 @@
 
 - Based on docsify
 
-[Get Started](1-arch)
-[Blog](https://brx86.gitee.io)
+[Get Started](Arch_For_Aya)
 [GitHub](https://github.com/brx86)
