@@ -2,7 +2,8 @@
 
 > Cloudflare是一家国外的知名CDN加速服务商，提供免费与付费的加速和网站保护服务。这里我们使用其推出的边缘计算服务CloudFlare Workers（以下简称Workers）搭建反向代理，以实现加速访问github。
 
-Demo地址：https://git.aya1.xyz/
+Demo地址：https://git.aya1.top/
+万能反代: https://aya1.top/
 
 ***
 
