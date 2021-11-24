@@ -1,6 +1,6 @@
 ## **Aya反代与短网址服务**
 
-**aya1.top是我在 *Cloudflare Worker* 上搭建的反代服务**,
+**aya1.top**是我在 *Cloudflare Worker* 上搭建的反代服务*,
 
 主要用于下载用途，也可以代理git clone,
 
