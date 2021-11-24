@@ -27,10 +27,11 @@
     | url    | string | 待缩短的网址 | 必须     |
 
 
+   
    示例：
 
     ```bash
-    # 使用Curl请求
+    # 使用curl请求
     ❯ curl https://s.aya1.top -d '{"url": "https://note.aya1.top/#/Arch_For_Aya"}'
     # 返回值：
     {"status":200,"key":"/bPjk7C"}
