@@ -1,4 +1,4 @@
-## **Aya反代服务**
+## **Aya反代与短网址服务**
 
 **aya1.top是我在 *Cloudflare Worker* 上搭建的反代服务**,
 
@@ -15,3 +15,21 @@ git clone https://aya1.top/https://github.com/ventoy/vtoyboot
 
 wget https://aya1.top/https://github.com/Clansty/Icalingua/releases/download/v2.2.0/Icalingua-2.2.0.AppImage
 ```
+
+## 短网址：
+1. 直接访问[网页端](https://s.aya1.top/)
+2. 使用api，调用方式：HTTP POST，请求格式: JSON
+
+    请求参数:
+
+    | 参数名 | 类型 | 说明 | 是否必须 |
+    | :---: | :---: | :---: | :---: |
+    | url | string | 待缩短的网址 |必须|
+
+    示例：
+   ```bash
+   # 使用curl请求
+   ❯ curl https://s.aya1.top -d '{"url": "https://note.aya1.top/#/Arch_For_Aya"}'
+   # 返回值：
+   {"status":200,"key":"/bPjk7C"}
+   ```
