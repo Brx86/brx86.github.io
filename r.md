@@ -22,9 +22,12 @@
 
     请求参数:
 
-    | 参数名 | 类型 | 说明 | 是否必须 |
-    | :---: | :---: | :---: | :---: |
-    | url | string | 待缩短的网址 |必须|
+    |  参数名  |     url      |
+    | :------: | :----------: |
+    |   类型   |    string    |
+    |   说明   | 待缩短的网址 |
+    | 是否必须 |     必须     |
+
 
     示例：
    ```bash
@@ -32,5 +35,6 @@
    ❯ curl https://s.aya1.top -d '{"url": "https://note.aya1.top/#/Arch_For_Aya"}'
    # 返回值：
    {"status":200,"key":"/bPjk7C"}
+   # 然后访问 https://aya1.top/bPjk7C 即可
    ```
-   然后访问 https://aya1.top/bPjk7C 即可
+
