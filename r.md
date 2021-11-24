@@ -39,7 +39,7 @@
 ## Aya个人常用短网址：
 
 vps2aya脚本：
-http://aya1.top/vps2aya
+https://aya1.top/vps2aya
 
 zinit备份：
-http://aya1.top/zinitbk
+https://aya1.top/zinitbk
