@@ -6,17 +6,17 @@
 
 [源码](https://gitlab.com/NickCao/experiments/-/blob/master/workers/r.js)可以在这里获取到。
 
-## 使用方法：
+## 反向代理使用方法：
 
 在链接前加上`https://aya1.top/`，如
 
 ```bash
-git clone https://aya1.top/https://github.com/ventoy/vtoyboot
+❯ git clone https://aya1.top/https://github.com/ventoy/vtoyboot
 
-wget https://aya1.top/https://github.com/Clansty/Icalingua/releases/download/v2.2.0/Icalingua-2.2.0.AppImage
+❯ wget https://aya1.top/https://github.com/Clansty/Icalingua/releases/download/v2.2.0/Icalingua-2.2.0.AppImage
 ```
 
-## 短网址：
+## 短网址使用方法：
 1. 直接访问[网页端](https://s.aya1.top/)
 2. 使用api，调用方式：HTTP POST，请求格式: JSON
 
@@ -33,3 +33,4 @@ wget https://aya1.top/https://github.com/Clansty/Icalingua/releases/download/v2.
    # 返回值：
    {"status":200,"key":"/bPjk7C"}
    ```
+   然后访问 https://aya1.top/bPjk7C 即可
