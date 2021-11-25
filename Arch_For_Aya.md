@@ -83,7 +83,8 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 #### 设置时区与utc时间
 
 ```
-ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+timedatectl set-timezone Asia/Shanghai
+timedatectl set-ntp true
 hwclock --systohc --utc
 ```
 
