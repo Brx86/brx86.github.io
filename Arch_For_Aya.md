@@ -16,7 +16,7 @@ Server = https://mirrors.163.com/archlinux/$repo/os/$arch
 
 > /dev/sda
 >
-> └ sda1	30M	EFI System
+> └ sda1	100M	EFI System
 >
 > └ sda2	50G	Linux Filesystem
 
