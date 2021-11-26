@@ -1,6 +1,6 @@
 - [Arch安装手册](Arch_For_Aya)
 - [Aya反代服务](r)
-- [Aya的杂乱小本本](1-arch)
+- [Aya的杂乱小本本](1-note)
 - [Arch系安装并配置fcitx5输入法](2-fcitx5)
 - [随机返回Kemomimi酱图片的API](3-api)
 - [PHP随机图片API的实现](4-phpapi)
