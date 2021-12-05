@@ -38,6 +38,34 @@ faillock --reset --user <username>
 6.git push -u origin main        //代码合并
 ```
 
+**VNC拓展屏幕**
+
+`nano /etc/X11/xorg.conf.d/01-dummy-monitor.conf`
+```
+Section "Device"
+        Identifier      "Configured Video Device"
+    Driver "intel"         #CHANGE THIS
+    Option "TearLess"   "1"
+EndSection
+
+Section "Monitor"
+        Identifier      "Configured Monitor"
+EndSection
+
+Section "Screen"
+        Identifier      "Default Screen"
+        Monitor         "Configured Monitor"
+        Device          "Configured Video Device"
+EndSection
+```
+```shell
+# 添加显示器参数
+xrandr --newmode "1920x1200_60.00" 100.00 1920 1600 1600 1600 1200 1000 1000 1000 -hsync +vsync
+xrandr --addmode VIRTUAL1 1920x1200_60.00
+# 启用VNC
+x11vnc -display :0 -clip xinerama1 -usepw -xrandr -forever -nonc -noxdamage -repeat
+```
+
 **arch下解压zip文件名乱码**
 ```shell
 sudo pacman -S unzip-iconv
