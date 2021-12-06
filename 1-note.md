@@ -117,7 +117,9 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 **netease网易云音乐中文**  https://gitee.com/sakura99/netease-cloud-music_For_Arch
 
 **nvidia 显卡**  
-prime方案  https://blog.sakuya.love/archives/linuxgpu/  
+prime方案  
+https://blog.sakuya.love/archives/linuxgpu/  
+https://blog.lilydjwg.me/2019/9/3/nvidia-prime-setup.214768.html  
 optimus方案  https://tieba.baidu.com/p/6340530678
 
 ```shell
