@@ -2,7 +2,7 @@
 ![](https://b23.tv/v8nrxqd)
 
 
-**arco镜像站**  https://bike.seedhost.eu/arcolinux/iso/
+**arco镜像站**  https://ant.seedhost.eu/arcolinux/iso/
 
 **vbox隐藏菜单栏**
 HostKey + Home
