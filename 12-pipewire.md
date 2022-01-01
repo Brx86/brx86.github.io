@@ -12,7 +12,8 @@
 
 ```shell
 # 安装Pipewire本体
-sudo pacman -S wireplumber pipewire-alsa pipewire-pulse pipewire-jack
+# 提示选择pipewire-media-session和wireplumber时二选一即可，建议后者
+sudo pacman -S pipewire-alsa pipewire-pulse pipewire-jack
 # 如果需要32位支持，可以再安装lib32-pipewire lib32-pipewire-jack
 sudo pacman -S lib32-pipewire lib32-pipewire-jack
 ```
