@@ -34,3 +34,8 @@ systemctl enable bluetooth
 
 
 #### 4.安装完成，重启体验Pipewire的音质吧！
+
+>Pipewire是红帽造的新一代音视频轮子，主要是用来取代PulseAudio、jack还有gstreams什么的。
+>据说延迟补偿还不错，据说能统一音视频框架还兼容PulseAudio和Jack，据说是朝着专业级音效去的。据说支持Wayland和平板，据说支持Flatpak之类的容器内使用，据说有类似PolKit的权限管理，不需要像PulseAudio那样新建音频用户组和添加用户……
+
+以上摘选自 https://zhangjk98.xyz/pipewire/
