@@ -22,7 +22,6 @@ sudo pacman -S lib32-pipewire lib32-pipewire-jack
 ```shell
 systemctl enable pipewire --user
 systemctl enable pipewire-pulse --user
-fcitx5 &
 ```
 
 #### 3.如果是新装的Arch，还未配置蓝牙，可以顺便装上（已经配置好的可以忽略这一步）
