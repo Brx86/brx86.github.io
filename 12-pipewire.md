@@ -11,11 +11,16 @@
 #### 1.安装Pipewire及其组件：
 
 ```shell
+# 卸载pulseaudio相关包
+sudo pacman -Rsc pulseaudio
+
 # 安装Pipewire本体
 # 提示选择pipewire-media-session和wireplumber时二选一即可，建议后者
 sudo pacman -S pipewire-alsa pipewire-pulse pipewire-jack
 # 如果需要32位支持，可以再安装lib32-pipewire lib32-pipewire-jack
 sudo pacman -S lib32-pipewire lib32-pipewire-jack
+# 如果需要均衡器，安装easyeffects
+sudo pacman -S easyeffects
 ```
 
 #### 2.启用Pipewire相关服务：
@@ -38,4 +43,4 @@ systemctl enable bluetooth
 >Pipewire是红帽造的新一代音视频轮子，主要是用来取代PulseAudio、jack还有gstreams什么的。
 >据说延迟补偿还不错，据说能统一音视频框架还兼容PulseAudio和Jack，据说是朝着专业级音效去的。据说支持Wayland和平板，据说支持Flatpak之类的容器内使用，据说有类似PolKit的权限管理，不需要像PulseAudio那样新建音频用户组和添加用户……
 
-以上摘选自 https://zhangjk98.xyz/pipewire/
+>以上摘选自 https://zhangjk98.xyz/pipewire/
