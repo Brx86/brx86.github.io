@@ -10,6 +10,7 @@
 - [Arch系配置代理最简方法](9-v2raya)
 - [使用AutoKey在Vscode-QQ快速发送图片](10-vscodeqq)
 - [Aya的小爬虫合集](11-pybili)
+- [Pipewire尝鲜](12-pipewire)
 - **Links**
 - [![Github](assets/img/github.svg)Github](https://github.com/brx86)
 - [![zhullyb](assets/img/code.svg)zhullyb](https://zhullyb.top/)
