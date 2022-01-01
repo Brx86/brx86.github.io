@@ -1,0 +1,36 @@
+# 把PulseAudio替换成Pipewire
+
+
+>Pipewire 是 Red Hat 的 Wim Taymans 领导开发的，他也是 GStreamer 项目的联合创始人。当初由于 Linux 声音系统 PulseAudio 在许多方面不如人意，因此其决定从头实现一个全新的媒体系统 ，计划最终取代 PulseAudio，成为新的 Linux 多媒体基础设施。 
+>就个人体验而言，使用btrfs反复对比后感觉音质提升挺明显的（戴上原道，已触发悔恨之泪buff）
+
+---
+
+## 全部操作：
+
+#### 1.安装Pipewire及其组件：
+
+```shell
+# 安装Pipewire本体
+sudo pacman -S wireplumber pipewire-alsa pipewire-pulse pipewire-jack
+# 如果需要32位支持，可以再安装lib32-pipewire lib32-pipewire-jack
+sudo pacman -S lib32-pipewire lib32-pipewire-jack
+```
+
+#### 2.启用Pipewire相关服务：
+
+```shell
+systemctl enable pipewire --user
+systemctl enable pipewire-pulse --user
+fcitx5 &
+```
+
+#### 3.如果是新装的Arch，还未配置蓝牙，可以顺便装上（已经配置好的可以忽略这一步）
+
+```shell
+sudo pacman -S blueman
+systemctl enable bluetooth
+```
+
+
+#### 4.安装完成，重启体验Pipewire的音质吧！
