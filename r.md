@@ -13,7 +13,7 @@
 ```bash
 ❯ git clone https://aya1.top/https://github.com/ventoy/vtoyboot
 
-❯ wget https://github.com/Icalingua/Icalingua/releases/download/v2.4.3/Icalingua-2.4.3.AppImage
+❯ wget https://aya1.top/https://github.com/Icalingua/Icalingua/releases/download/v2.4.3/Icalingua-2.4.3.AppImage
 ```
 
 ## 短网址使用方法：
