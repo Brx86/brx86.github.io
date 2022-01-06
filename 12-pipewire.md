@@ -1,5 +1,4 @@
 # 把PulseAudio替换成Pipewire
-- [Pipewire尝鲜](12-pipewire)
 
 
 >Pipewire 是 Red Hat 的 Wim Taymans 领导开发的，他也是 GStreamer 项目的联合创始人。当初由于 Linux 声音系统 PulseAudio 在许多方面不如人意，因此其决定从头实现一个全新的媒体系统 ，计划最终取代 PulseAudio，成为新的 Linux 多媒体基础设施。 
