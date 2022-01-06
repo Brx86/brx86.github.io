@@ -11,11 +11,7 @@
 
 #### 1.安装Pipewire及其组件：
 
-```shell
-# 卸载pulseaudio相关包
-# sudo pacman -Rsc pulseaudio
-
-# 安装Pipewire本体
+```shell# 安装Pipewire本体
 # 提示选择pipewire-media-session和wireplumber时二选一即可，建议后者
 sudo pacman -S pipewire-alsa pipewire-pulse pipewire-jack
 # 如果需要32位支持，可以再安装lib32-pipewire lib32-pipewire-jack
