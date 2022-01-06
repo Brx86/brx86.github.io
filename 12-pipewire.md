@@ -4,7 +4,6 @@
 >Pipewire 是 Red Hat 的 Wim Taymans 领导开发的，他也是 GStreamer 项目的联合创始人。当初由于 Linux 声音系统 PulseAudio 在许多方面不如人意，因此其决定从头实现一个全新的媒体系统 ，计划最终取代 PulseAudio，成为新的 Linux 多媒体基础设施。 
 >就个人体验而言，使用btrfs反复对比后感觉音质提升挺明显的（戴上原道，已触发悔恨之泪buff）
 
----
 <h2 p style="color:#FF0000";>注意：</h2>
 <h3 p style="color:#FF0000";>操作前请做好准备，如有可能最好创建快照。请勿随意使用pacman -Rc以免卸载掉桌面必备组件</h3>
 
