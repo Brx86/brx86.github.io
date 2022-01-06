@@ -6,8 +6,7 @@
 
 ---
 <h2 p style="color:#FF0000";>注意：</h2>
-<h3 p style="color:#FF0000";>操作前请做好准备，如有可能最好创建快照。</h3>
-<h3 p style="color:#FF0000";>请勿随意使用pacman -Rc以免卸载掉桌面必备组件</h3>
+<h3 p style="color:#FF0000";>操作前请做好准备，如有可能最好创建快照。请勿随意使用pacman -Rc以免卸载掉桌面必备组件</h3>
 
 ## 全部操作：
 
