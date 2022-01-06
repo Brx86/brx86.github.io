@@ -9,10 +9,10 @@
 ## 全部操作：
 
 #### 1.安装Pipewire及其组件：
-
+提示与pulseaudio冲突是正常现象，选y确认替换
 ```shell# 安装Pipewire本体
 # 提示选择pipewire-media-session和wireplumber时二选一即可，建议后者
-sudo pacman -S pipewire-alsa pipewire-pulse pipewire-jack
+sudo pacman -S pipewire-pulse pipewire-alsa pipewire-jack
 # 如果需要32位支持，可以再安装lib32-pipewire lib32-pipewire-jack
 sudo pacman -S lib32-pipewire lib32-pipewire-jack
 # 如果需要均衡器，安装easyeffects
