@@ -46,6 +46,8 @@ sudo pacman -Rsc fcitx
 > fcitx5-configtool：fcitx5的图形化配置工具
 > 
 > fcitx5-material-color：一个很好看的主题，详细说明：https://github.com/hosxy/Fcitx5-Material-Color
+>
+> fcitx5-nord：另一个很好看的主题，详细说明：https://github.com/tonyfettes/fcitx5-nord
 > 
 > fcitx5-pinyin-moegirl：outloudvi根据萌娘百科创建的词库（涵盖了许多有意思的名词）
 > 
@@ -63,3 +65,4 @@ sudo pacman -Rsc fcitx
 在配置-附加组件-经典用户界面启用
 
 ![](/pic/2.3.png)
+
