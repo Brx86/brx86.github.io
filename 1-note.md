@@ -313,3 +313,20 @@ net start LxssManager    //启动
 ```
 **win10镜像直接下载**  
 https://www.microsoft.com/zh-cn/software-download/windows10ISO/
+
+
+**paru**
+
+```
+1. paru没有yay的一些奇怪bug，比如：
+
+   yay -Si qv2ray
+   yay -G motrix
+
+2. paru默认即可查看pkgbuild，在安装bat的情况下可以高亮；
+        修改/etc/paru.conf，可以使用ranger+editor修改包括pkgbuild在内的文件，并且保存在本地，在下次更新时合并更改
+
+3. paru -Ui相当于makepkg -si，并且可以处理aur依赖；
+
+4. paru -Gc可以直接显示某个包的评论区；
+```
