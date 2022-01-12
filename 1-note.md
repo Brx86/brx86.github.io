@@ -18,6 +18,12 @@ HostKey + Home
 chsh -s /bin/zsh  
 ```
 
+**防止内核更新后找不到模块(适用于arch服务器)
+```bash
+sudo pacman -S kernel-modules-hook
+sudo systemctl enable linux-modules-cleanup.service --now
+```
+
 **尝试登录失败三次被锁定，立即解锁**
 ```bash
 faillock --reset --user <username>
@@ -68,8 +74,7 @@ x11vnc -display :0 -clip xinerama1 -usepw -xrandr -forever -nonc -noxdamage -rep
 
 **arch下解压zip文件名乱码**
 ```shell
-sudo pacman -S unzip-iconv
-unzip -O gbk file.zip
+sudo pacman -S p7zip-natspec unzip-natspec
 ```
 
 **yay省略参数**
@@ -96,10 +101,8 @@ sudo pacman -U https://update.todesk.com/linux/todesk-1.2.4_d_x86_64.pkg.tar.zst
 ```shell
 #/etc/pacman.d/mirrorlist
 Server = https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch
-Server = https://mirrors.huaweicloud.com/archlinux/$repo/os/$arch
 Server = https://mirrors.cloud.tencent.com/archlinux/$repo/os/$arch
 Server = http://mirrors.163.com/archlinux/$repo/os/$arch
-Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 ```
 
 ```shell
@@ -109,8 +112,6 @@ SigLevel = Never
 Server =  https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 Server = https://mirrors.cloud.tencent.com/archlinuxcn/$arch
 Server = http://mirrors.163.com/archlinux-cn/$arch
-Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch 
 
 ```
 
@@ -148,17 +149,13 @@ sudo pacman -S archlinuxcn/lib32-ncurses5-compat-libs
 env WINEPREFIX="$HOME/.deepinwine/容器名" deepin-wine5 winecfg
 ```
 
-**wps中文包reboot**
-wps-office-mui-zh-cn
-
-**deepin-qq中文字体**
-https://www.cnblogs.com/crab-in-the-northeast/p/change-chinese-font-of-deepin-wine-qq.html
-
-
-**Manjaro常用软件安装** https://blog.csdn.net/weixin_43968923/article/details/86662256
-
-
-ArcoLinux 的安装镜像分为三种：ArcoLinux、ArcoLinuxD 及 ArcoLinuxB。ArcoLinux 默认包含三个同时存在的桌面环境或窗口管理器：Xfce、OpenBox 及 i3。用户可以在这三个桌面之间快速地切换。ArcoLinuxD 是一个最小化安装，D 代表「Choose the Desktop」，它允许用户修改安装脚本并选择自己喜好的桌面环境。ArcoLinuxB 提供了高度的可定制性，B 代表「Build Your Own ISO」。其允许用户任意修改 ISO 文件。ArcoLinuxB 也预先提供了分别配有不同桌面环境的十余种预先构建好的安装镜像。这些桌面环境包括但不限于 Cinnamon、Awesome、Bugdie、GNOME、MATE 及 Plasama。
+**完整安装wps**
+```bash
+# 国际版
+paru -S wps-office wps-office-mime
+# 国内版
+paru -S wps-office-cn wps-office-mime-cn wps-office-mui-zh-cn
+```
 
 **中文字体**
 
@@ -178,8 +175,15 @@ sudo cp /run/media/aya/71475E9362E7021C/Windows/Fonts/*.ttf /usr/share/fonts/ms/
 sudo chmod 766 /usr/share/fonts/ms/* &&mkfontscale&&mkfontdir&&fc-cache -fv
 ```
 
+**deepin-qq中文字体**
+https://www.cnblogs.com/crab-in-the-northeast/p/change-chinese-font-of-deepin-wine-qq.html
+
+**Manjaro常用软件安装** https://blog.csdn.net/weixin_43968923/article/details/86662256
+
+ArcoLinux 的安装镜像分为三种：ArcoLinux、ArcoLinuxD 及 ArcoLinuxB。ArcoLinux 默认包含三个同时存在的桌面环境或窗口管理器：Xfce、OpenBox 及 i3。用户可以在这三个桌面之间快速地切换。ArcoLinuxD 是一个最小化安装，D 代表「Choose the Desktop」，它允许用户修改安装脚本并选择自己喜好的桌面环境。ArcoLinuxB 提供了高度的可定制性，B 代表「Build Your Own ISO」。其允许用户任意修改 ISO 文件。ArcoLinuxB 也预先提供了分别配有不同桌面环境的十余种预先构建好的安装镜像。这些桌面环境包括但不限于 Cinnamon、Awesome、Bugdie、GNOME、MATE 及 Plasama。
+
 ~~**搜狗拼音**~~
-~~https://www.cnblogs.com/qscgy/archive/2020/07/27/13385905.html  yay -S fcitx fcitx-configtool fcitx-sogoupinyin aur/fcitx-qt4 --noconfirm &&sudo pacman -U https://arch-archive.tuna.tsinghua.edu.cn/2019/04-29/community/os/x86_64/fcitx-qt4-4.2.9.6-1-x86_64.pkg.tar.xz && sudo pacman -S fcitx fcitx-configtool fcitx-sogoupinyin~~
+~~https://www.cnblogs.com/qscgy/archive/2020/07/27/13385905.html  paru -S fcitx fcitx-configtool fcitx-sogoupinyin aur/fcitx-qt4 --noconfirm &&sudo pacman -U https://arch-archive.tuna.tsinghua.edu.cn/2019/04-29/community/os/x86_64/fcitx-qt4-4.2.9.6-1-x86_64.pkg.tar.xz && sudo pacman -S fcitx fcitx-configtool fcitx-sogoupinyin~~
 
 **sublime3汉化** https://blog.csdn.net/Andrelia20171760/article/details/81814652?
 
@@ -202,14 +206,14 @@ sudo pacman -S linux-headers virtualbox-host-modules-arch && sudo modprobe vboxd
 #生成软件包列表
 pacman -Qqe > pack.txt
 #重新安装
-yay --needed -S --noconfirm - < pack.txt 
+paru -S --needed --noconfirm - < pack.txt 
 #清除多余包
-yay -Yc
+paru -c
 ```
 
 **scrcpy投屏** 
 ```shell
-yay -S guiscrcpy qt-scrcpy
+paru -S guiscrcpy qt-scrcpy
 ```
 
 **xfce桌面不显示：** xfdesktop 

@@ -66,3 +66,5 @@ sudo pacman -Rsc fcitx
 
 ![](/pic/2.3.png)
 
+
+这个界面
