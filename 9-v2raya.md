@@ -11,7 +11,8 @@ Arch系常用的代理软件有**v2rayA**和**Qv2ray**。相比后者，v2rayA�
 
 v2rayA实际界面如图所示：
 
-![](https://gitee.com/brx86/picpool/raw/master/2021/04/30/ea3c67eee9eace078ce5abcf86dd0371.png)
+![](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/14f43276d4a275f1f9378b2167e5c5cbe5e68cee4cbfa88310bea9114ead784e.png)  
+
 
 ****
 
@@ -67,4 +68,4 @@ v2rayA实际界面如图所示：
 - 设置里点击“开启局域网共享”，点击“地址与端口”查看代理端口号，同一局域网下的设备均可通过ip与端口使用该设备的socks或http代理
 - 更多详细使用方法请参考[wiki](https://github.com/v2rayA/v2rayA/wiki/Home_zh)
 
-![](https://gitee.com/brx86/picpool/raw/master/2021/04/30/ea3c67eee9eace078ce5abcf86dd0371.png)
+![](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/14f43276d4a275f1f9378b2167e5c5cbe5e68cee4cbfa88310bea9114ead784e.png)  
