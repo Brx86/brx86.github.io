@@ -4,13 +4,8 @@
 
 ```
 systemctl stop reflector
-nano /etc/pacman.d/mirrorlist
-```
-
-第一行改成
-
-```
-Server = https://mirrors.163.com/archlinux/$repo/os/$arch
+sed -i 's|#Parallel|Parallel|g' /etc/pacman.conf
+echo 'Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux/$repo/os/$arch' >/etc/pacman.d/mirrorlist
 ```
 
 #### **分区：cfdisk /dev/sda**
@@ -108,7 +103,8 @@ passwd aya
 ##### 1.安装cinnamon与网络/音频相关包
 
 ```
-pacman -S xorg-server xrandr cinnamon xfce4-terminal lightdm-gtk-greeter-settings
+sed -i 's|#Parallel|Parallel|g' /etc/pacman.conf
+pacman -S xorg-server xorg-xrandr cinnamon xfce4-terminal lightdm-gtk-greeter-settings
 pacman -S pipewire-pulse pipewire-alsa pipewire-jack pavucontrol networkmanager
 systemctl enable lightdm
 systemctl enable NetworkManager
@@ -117,7 +113,7 @@ systemctl enable NetworkManager
 ##### 2.安装xfce与网络/音频相关包
 
 ```bash
-pacman -S xorg-server xrandr xfce4 xfce4-goodies lightdm-gtk-greeter-settings 
+pacman -S xorg-server xorg-xrandr xfce4 xfce4-goodies lightdm-gtk-greeter-settings 
 pacman -S pipewire-pulse pipewire-alsa pipewire-jack pavucontrol network-manager-applet
 systemctl enable lightdm
 systemctl enable NetworkManager
