@@ -68,4 +68,4 @@ v2rayA实际界面如图所示：
 - 设置里点击“开启局域网共享”，点击“地址与端口”查看代理端口号，同一局域网下的设备均可通过ip与端口使用该设备的socks或http代理
 - 更多详细使用方法请参考[wiki](https://github.com/v2rayA/v2rayA/wiki/Home_zh)
 
-![](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/14f43276d4a275f1f9378b2167e5c5cbe5e68cee4cbfa88310bea9114ead784e.png)  
+![](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/14f43276d4a275f1f9378b2167e5c5cbe5e68cee4cbfa88310bea9114ead784e.png)
