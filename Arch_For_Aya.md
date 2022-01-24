@@ -34,9 +34,9 @@ mkfs.xfs /dev/sda2
 ```
 mount /dev/sda2 /mnt
 
-mkdir -p /mnt/boot/efi
+mkdir /mnt/efi
 
-mount /dev/sda1 /mnt/boot/efi
+mount /dev/sda1 /mnt/efi
 ```
 
 #### **安装基本系统**
@@ -127,7 +127,7 @@ systemctl enable NetworkManager
 
 ```
 pacman -S grub efibootmgr os-prober dosfstools intel-ucode
-grub-install --efi-directory=/boot/efi
+grub-install --efi-directory=/efi
 sed -i 's|#GRUB_DISABLE_OS_PROBER=false|GRUB_DISABLE_OS_PROBER=false|g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
