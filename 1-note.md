@@ -117,6 +117,11 @@ Server = http://mirrors.163.com/archlinux-cn/$arch
 
 **netease网易云音乐中文**  https://gitee.com/sakura99/netease-cloud-music_For_Arch
 
+**xfce-goodies多余插件**
+```shell
+sudo pacman -Rsn xfburn xfce4-dict xfce4-eyes-plugin xfce4-fsguard-plugin xfce4-notes-plugin xfce4-smartbookmark-plugin xfce4-verve-plugin xfce4-weather-plugin
+```
+
 **nvidia 显卡**  
 prime方案  
 https://blog.sakuya.love/archives/linuxgpu/  
