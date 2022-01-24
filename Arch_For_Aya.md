@@ -1,8 +1,9 @@
 # Aya的丢人笔记
 
-#### **编辑镜像站**
+#### **关闭reflector，编辑镜像站**
 
 ```
+systemctl stop reflector
 nano /etc/pacman.d/mirrorlist
 ```
 
@@ -12,11 +13,11 @@ nano /etc/pacman.d/mirrorlist
 Server = https://mirrors.163.com/archlinux/$repo/os/$arch
 ```
 
-#### **分区-cfdisk**
+#### **分区：cfdisk /dev/sda**
 
 > /dev/sda
 >
-> └ sda1	100M	EFI System
+> └ sda1	10M	EFI System
 >
 > └ sda2	50G	Linux Filesystem
 
@@ -93,7 +94,7 @@ hwclock --systohc --utc
 
 ```
 useradd -m -G wheel aya
-echo '%wheel ALL=(ALL) ALL' >> /etc/sudoers
+sed -i 's|# %wheel ALL=(ALL) ALL|%wheel ALL=(ALL) ALL|g' /etc/sudoers
 ```
 
 设置密码
@@ -102,18 +103,13 @@ echo '%wheel ALL=(ALL) ALL' >> /etc/sudoers
 passwd aya
 ```
 
-#### 安装intel核显与触摸板驱动
-
-```
-pacman -S xf86-video-intel xf86-input-synaptics
-```
 #### 桌面环境装一个就行
 
 ##### 1.安装cinnamon与网络/音频相关包
 
 ```
-pacman -S xorg cinnamon xfce4-terminal lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
-pacman -S pulseaudio pulseaudio-alsa pavucontrol dhcpcd networkmanager
+pacman -S xorg cinnamon xfce4-terminal lightdm-gtk-greeter-settings
+pacman -S pipewire-pulse pipewire-alsa pipewire-jack pavucontrol networkmanager
 systemctl enable lightdm
 systemctl enable NetworkManager
 ```
@@ -121,8 +117,8 @@ systemctl enable NetworkManager
 ##### 2.安装xfce与网络/音频相关包
 
 ```bash
-pacman -S xorg xfce4 xfce4-goodies lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings 
-pacman -S pulseaudio pulseaudio-alsa pavucontrol dhcpcd network-manager-applet
+pacman -S xorg xfce4 xfce4-goodies lightdm-gtk-greeter-settings 
+pacman -S pipewire-pulse pipewire-alsa pipewire-jack pavucontrol network-manager-applet
 systemctl enable lightdm
 systemctl enable NetworkManager
 ```
@@ -132,6 +128,7 @@ systemctl enable NetworkManager
 ```
 pacman -S grub efibootmgr os-prober dosfstools intel-ucode
 grub-install --efi-directory=/boot/efi
+sed -i 's|#GRUB_DISABLE_OS_PROBER=false|GRUB_DISABLE_OS_PROBER=false|g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
