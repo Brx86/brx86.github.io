@@ -5,6 +5,7 @@
 ```
 systemctl stop reflector
 sed -i 's|#Parallel|Parallel|g' /etc/pacman.conf
+sed -i 's|SigLevel|SigLevel = Never\n#SigLevel|g' /etc/pacman.conf
 echo 'Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux/$repo/os/$arch' >/etc/pacman.d/mirrorlist
 ```
 
