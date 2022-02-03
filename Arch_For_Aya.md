@@ -108,7 +108,7 @@ passwd aya
 ##### 1.安装cinnamon与网络/音频相关包
 
 ```
-pacman -S xorg-server xrandr cinnamon xfce4-terminal lightdm-gtk-greeter-settings
+pacman -S xorg cinnamon xfce4-terminal lightdm-gtk-greeter-settings
 pacman -S pipewire-pulse pipewire-alsa pipewire-jack pavucontrol networkmanager
 systemctl enable lightdm
 systemctl enable NetworkManager
@@ -117,7 +117,7 @@ systemctl enable NetworkManager
 ##### 2.安装xfce与网络/音频相关包
 
 ```bash
-pacman -S xorg-server xrandr xfce4 xfce4-goodies lightdm-gtk-greeter-settings 
+pacman -S xorg xfce4 xfce4-goodies lightdm-gtk-greeter-settings 
 pacman -S pipewire-pulse pipewire-alsa pipewire-jack pavucontrol network-manager-applet
 systemctl enable lightdm
 systemctl enable NetworkManager
