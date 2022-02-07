@@ -122,6 +122,12 @@ Server = http://mirrors.163.com/archlinux-cn/$arch
 sudo pacman -Rsn xfburn xfce4-dict xfce4-eyes-plugin xfce4-fsguard-plugin xfce4-notes-plugin xfce4-smartbookmark-plugin xfce4-verve-plugin xfce4-weather-plugin
 ```
 
+**mitmproxy证书安装**
+```shell
+sudo cp mitmproxy-ca-cert.pem /usr/local/share/ca-certificates/
+sudo trust extract-compat
+```
+
 **nvidia 显卡**  
 prime方案  
 https://blog.sakuya.love/archives/linuxgpu/  
