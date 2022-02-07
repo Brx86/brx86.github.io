@@ -15,9 +15,8 @@ sudo pacman -S --noconfirm fcitx5-im fcitx5-qt4 fcitx5-chinese-addons fcitx5-mat
 
 ```shell
 export QT_IM_MODULE=fcitx5
-export GTK_MODULE=fcitx
+export GTK_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
-fcitx5 &
 ```
 
 #### 3.保存，注销重新登录，然后在托盘图标右键详细配置即可愉快使用！
