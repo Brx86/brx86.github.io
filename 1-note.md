@@ -18,7 +18,7 @@ HostKey + Home
 chsh -s /bin/zsh  
 ```
 
-**防止内核更新后找不到模块(适用于arch服务器)
+**防止内核更新后找不到模块(适用于arch服务器)**
 ```bash
 sudo pacman -S kernel-modules-hook
 sudo systemctl enable linux-modules-cleanup.service --now
@@ -128,7 +128,10 @@ sudo cp mitmproxy-ca-cert.pem /usr/local/share/ca-certificates/
 sudo trust extract-compat
 ```
 
-**pip安装的pyside2无法使用fcitx5输入法**
+**pip安装的pyside2无法使用fcitx5输入法**  
+参考：
+[Spyder无法使用fcitx输入法](https://go.suokunlong.cn:88/wp/spyder-fcitx-pyqt5-setup/) 与
+[archlinux-cn聊天记录](https://t.me/archlinuxcn_group/2253927)
 ```shell
 ln -s /usr/lib/qt/plugins/platforminputcontexts/libfcitx5platforminputcontextplugin.so <some_path>/site-packages/PySide2/Qt/plugins/platforminputcontexts/
 ```
