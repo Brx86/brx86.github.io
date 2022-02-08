@@ -128,6 +128,11 @@ sudo cp mitmproxy-ca-cert.pem /usr/local/share/ca-certificates/
 sudo trust extract-compat
 ```
 
+**pip安装的pyside2无法使用fcitx5输入法**
+```shell
+ln -s /usr/lib/qt/plugins/platforminputcontexts/libfcitx5platforminputcontextplugin.so <some_path>/site-packages/PySide2/Qt/plugins/platforminputcontexts/
+```
+
 **nvidia 显卡**  
 prime方案  
 https://blog.sakuya.love/archives/linuxgpu/  
