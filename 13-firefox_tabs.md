@@ -24,7 +24,7 @@
 
     wget https://raw.aya1.top/ranmaru22/firefox-vertical-tabs/main/userChrome.css -P chrome
 
-#### 2.安装Tab Center Reborn拓展：
+### 2.安装Tab Center Reborn拓展：
 
 点击安装拓展：[Tab Center Reborn](https://addons.mozilla.org/zh-CN/firefox/addon/tabcenter-reborn/)
 
@@ -37,7 +37,7 @@
 ![](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/a13fea11471f59a14e4db7b5e92eaa923f195f90c5ed628b56887bb615d2ea7a.png)   
 ![](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/6e3e4f077d8eb3cd9ec6a4d8f1ab40114a2e3dede68e6639c2697e0359bb7e62.png)  
 
-#### 3.重启Firefox，享受无标签顶栏、有动态标签侧栏的火狐吧！
+### 3.重启Firefox，享受无标签顶栏、有动态标签侧栏的火狐吧！
 
 ## 效果演示：
 
