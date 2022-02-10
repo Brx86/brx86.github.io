@@ -8,7 +8,7 @@
 #### 1.安装fcitx5及其组件：
 
 ```shell
-sudo pacman -S --noconfirm fcitx5-im fcitx5-qt4 fcitx5-chinese-addons fcitx5-material-color fcitx5-pinyin-moegirl fcitx5-pinyin-zhwiki
+sudo pacman -S --noconfirm fcitx5-im fcitx5-chinese-addons fcitx5-material-color fcitx5-pinyin-moegirl fcitx5-pinyin-zhwiki
 ```
 
 #### 2.修改~/.xprofile，添加以下几行：
