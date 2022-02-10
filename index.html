@@ -80,15 +80,78 @@
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
     <script>
-        const gitalk = new Gitalk({
+        addBackToTop({
+            diameter: 56,
+            backgroundColor: 'rgb(23,147,209)',
+            textColor: '#fff',
+        });
+    </script>
+    <script>
+        let props = {
             clientID: '0753fe38ae2aa7ad8398',
             clientSecret: '731281c60514d29a3f1331bcb3dd45763d484e39',
             repo: 'brx86.github.io',
             owner: 'brx86',
-            admin: 'brx86',
+            admin: ['brx86'],
+            // facebook-like distraction free mode
             distractionFreeMode: false,
-            id: location.pathname,
-        })
+            id: decodeURI(location.hash.split('?')[0])
+        };
+        let gitalk = new Gitalk(props);
+        // 哈希路由切换时 重新加载Gitalk
+        window.addEventListener('hashchange', onHashChange);
+        function onHashChange() {
+            props.id = decodeURI(location.hash.split('?')[0]); //如果不切分，在docsify里面的各个段落都会生成新的评论issue
+        }
+    </script>
+    <!-- 添加网站运行时间统计 -->
+    <script>
+        function siteTime() {
+            setTimeout(siteTime, 1000);
+            let seconds = 1000;
+            let minutes = seconds * 60;
+            let hours = minutes * 60;
+            let days = hours * 24;
+            let today = new Date();
+            let todayYear = today.getFullYear();
+            let todayMonth = today.getMonth() + 1;
+            let todayDate = today.getDate();
+            let todayHour = today.getHours();
+            let todayMinute = today.getMinutes();
+            let todaySecond = today.getSeconds();
+
+            let t1 = Date.UTC(2020, 08, 4, 0, 0, 0);
+            let t2 = Date.UTC(
+                todayYear,
+                todayMonth,
+                todayDate,
+                todayHour,
+                todayMinute,
+                todaySecond
+            );
+            let diff = t2 - t1;
+            let diffDays = Math.floor(diff / days);
+            let diffHours = Math.floor((diff - diffDays * days) / hours);
+            let diffMinutes = Math.floor(
+                (diff - diffDays * days - diffHours * hours) / minutes
+            );
+            let diffSeconds = Math.floor(
+                (diff - diffDays * days - diffHours * hours - diffMinutes * minutes) /
+                seconds
+            );
+            Docsify.dom.find('.runtime').innerHTML =
+                'Aya\'s Note已运行 ' +
+                diffDays +
+                ' 天 ' +
+                diffHours +
+                ' 小时 ' +
+                diffMinutes +
+                ' 分 ' +
+                diffSeconds +
+                ' 秒';
+        }
+        // 先让网页加载完，否则 Docsify.dom.find('.runtime') == null
+        setTimeout(siteTime, 500);
     </script>
 </body>
 
