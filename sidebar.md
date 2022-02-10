@@ -11,7 +11,7 @@
 - [使用AutoKey在Vscode-QQ快速发送图片](10-vscodeqq)
 - [Aya的小爬虫合集](11-pybili)
 - [Pipewire尝鲜](12-pipewire)
-- [Firefox使用Edge风格的侧栏标签页](13-firefox_tabs)
+- [Firefox使用侧栏标签页](13-firefox_tabs)
 - **Links**
 - [![Github](assets/img/github.svg)Github](https://github.com/brx86)
 - [![zhullyb](assets/img/code.svg)zhullyb](https://zhullyb.top/)
