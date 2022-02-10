@@ -75,6 +75,21 @@
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script>
+        const gitalk = new Gitalk({
+            clientID: '0753fe38ae2aa7ad8398',
+            clientSecret: '731281c60514d29a3f1331bcb3dd45763d484e39',
+            repo: 'brx86.github.io',
+            owner: 'brx86',
+            admin: [],
+            distractionFreeMode: false,
+            id: decodeURI(window.location.pathname),
+        })
+    </script>
 </body>
 
 </html>
