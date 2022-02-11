@@ -13,13 +13,14 @@ sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-moegirl fcitx5-piny
 
 ### 2. 新建或修改 `~/.pam_environment` ，添加以下几行：
 
-    GTK_IM_MODULE DEFAULT=fcitx
-    QT_IM_MODULE  DEFAULT=fcitx
-    XMODIFIERS    DEFAULT=\@im=fcitx
-    INPUT_METHOD  DEFAULT=fcitx
-    SDL_IM_MODULE DEFAULT=fcitx
-    GLFW_IM_MODULE DEFAULT=ibus
-
+```shell
+GTK_IM_MODULE DEFAULT=fcitx
+QT_IM_MODULE  DEFAULT=fcitx
+XMODIFIERS    DEFAULT=\@im=fcitx
+INPUT_METHOD  DEFAULT=fcitx
+SDL_IM_MODULE DEFAULT=fcitx
+GLFW_IM_MODULE DEFAULT=ibus
+```
 
 ### 3. 保存，注销重新登录，然后在托盘图标右键详细配置即可愉快使用！
 
@@ -48,7 +49,7 @@ sudo pacman -Rsc fcitx
 
     fcitx5-im：包组，包含四个包 fcitx5 fcitx5-gtk fcitx5-qt fcitx5-configtool
 
-    fcitx5 ：fcitx5引擎本体
+    fcitx5：fcitx5引擎本体
 
     fcitx5-qt fcitx5-gtk：对各种图形界面的支持模块
 
@@ -66,7 +67,7 @@ sudo pacman -Rsc fcitx
 
 ### 部分好用的设置（云拼音，候选词数量等）还可以通过修改配置文件启用：
 
-配置文件位置：~/.config/fcitx5/conf/pinyin.conf 
+配置文件位置：`~/.config/fcitx5/conf/pinyin.conf `
 
 ![](/pic/2.2.png)
 
@@ -76,10 +77,10 @@ sudo pacman -Rsc fcitx
 
 ![](/pic/2.3.png)
 
-横排，在程序中显示预编辑文本，fcitx5-material-color皮肤
+横排，在程序中显示预编辑文本，fcitx5-material-color蓝色皮肤
 
 ![](/pic/2.1.png)
 
-竖排，不显示预编辑文本，fcitx5-nord皮肤
+竖排，不显示预编辑文本，fcitx5-norda暗色皮肤
 
 ![](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/4e5366c1487fb2eb1067429ba6719049902c2d272d2f9ed8e1bd693d98d333e8.png)  
