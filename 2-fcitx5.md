@@ -81,6 +81,6 @@ sudo pacman -Rsc fcitx
 
 ![](/pic/2.1.png)
 
-竖排，不显示预编辑文本，fcitx5-norda暗色皮肤
+竖排，不显示预编辑文本，fcitx5-nord暗色皮肤
 
 ![](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/4e5366c1487fb2eb1067429ba6719049902c2d272d2f9ed8e1bd693d98d333e8.png)  
