@@ -37,6 +37,10 @@ curl -L https://aya1.top/zsample >> .zshrc
 zsh
 ```
 
+**更换tty字体**
+
+详见[Archwiki](https://wiki.archlinux.org/title/Linux_console_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E7%BB%88%E7%AB%AF%E5%AD%97%E4%BD%93#)
+
 **pip安装的pyside2无法使用fcitx5输入法**  
 参考：
 [Spyder无法使用fcitx输入法](https://go.suokunlong.cn:88/wp/spyder-fcitx-pyqt5-setup/) 与
