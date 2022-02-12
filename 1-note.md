@@ -31,7 +31,7 @@ faillock --reset --user <username>
 **一键配置zsh(zinit)**
 ```bash
 sudo pacman -Sy zsh lua git pkgfile
-sh -c "$(curl -fsSL https://aya1.top/zinstall)"
+sh -c "$(curl -fsSL https://git.io/zinit-install)"
 chsh -s /bin/zsh
 curl -L https://aya1.top/zsample >> .zshrc
 zsh
