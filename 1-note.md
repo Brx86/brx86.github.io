@@ -46,7 +46,7 @@ zsh
 [Spyder无法使用fcitx输入法](https://go.suokunlong.cn:88/wp/spyder-fcitx-pyqt5-setup/) 与
 [archlinux-cn聊天记录](https://t.me/archlinuxcn_group/2253927)
 ```shell
-ln -s /usr/lib/qt/plugins/platforminputcontexts/libfcitx5platforminputcontextplugin.so <some_path>/site-packages/PySide2/Qt/plugins/platforminputcontexts/
+ln -s /usr/lib/qt/plugins/platforminputcontexts/libfcitx5platforminputcontextplugin.so <your_path>/site-packages/PySide2/Qt/plugins/platforminputcontexts/
 ```
 
 **git本地默认使用main分支**
