@@ -28,6 +28,15 @@ sudo systemctl enable linux-modules-cleanup.service --now
 faillock --reset --user <username>
 ```
 
+**一键配置zsh(zinit)**
+```bash
+sudo pacman -Sy zsh lua git pkgfile
+sh -c "$(curl -fsSL https://aya1.top/zinstall)"
+chsh -s /bin/zsh
+curl -L https://aya1.top/zsample >> .zshrc
+zsh
+```
+
 **pip安装的pyside2无法使用fcitx5输入法**  
 参考：
 [Spyder无法使用fcitx输入法](https://go.suokunlong.cn:88/wp/spyder-fcitx-pyqt5-setup/) 与
