@@ -143,8 +143,9 @@ sudo pacman -Rsn xfburn xfce4-dict xfce4-eyes-plugin xfce4-fsguard-plugin xfce4-
 ```
 
 **mitmproxy证书安装**
+参考地址：https://archlinux.org/news/ca-certificates-update/
 ```shell
-sudo cp mitmproxy-ca-cert.pem /usr/local/share/ca-certificates/
+sudo cp mitmproxy-ca-cert.pem /etc/ca-certificates/trust-source/anchors/mitmproxy.crt
 sudo trust extract-compat
 ```
 
