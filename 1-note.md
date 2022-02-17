@@ -17,6 +17,15 @@ HostKey + Home
 chsh -s /bin/zsh  
 ```
 
+**冷知识**
+
+    官方仓库里最长的包名是46个字符的
+    opensearch-dashboards-anomaly-detection-plugin
+    算上archlinuxcn的话是49个字符的
+    gnome-shell-extension-sound-output-device-chooser
+    如果算上aur的话那就是60个字符的
+    gnome-shell-extension-control-blur-effect-on-lock-screen-git
+
 **Btrfs关闭指定文件的写时复制(CoW)**
 ```shell
 #关闭指定文件的CoW
@@ -77,19 +86,19 @@ ln -s /usr/lib/qt/plugins/platforminputcontexts/libfcitx5platforminputcontextplu
 `nano /etc/X11/xorg.conf.d/01-dummy-monitor.conf`
 ```
 Section "Device"
-        Identifier      "Configured Video Device"
+    Identifier      "Configured Video Device"
     Driver "intel"         #CHANGE THIS
     Option "TearLess"   "1"
 EndSection
 
 Section "Monitor"
-        Identifier      "Configured Monitor"
+    Identifier      "Configured Monitor"
 EndSection
 
 Section "Screen"
-        Identifier      "Default Screen"
-        Monitor         "Configured Monitor"
-        Device          "Configured Video Device"
+    Identifier      "Default Screen"
+    Monitor         "Configured Monitor"
+    Device          "Configured Video Device"
 EndSection
 ```
 ```shell
