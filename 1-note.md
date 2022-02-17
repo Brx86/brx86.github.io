@@ -17,6 +17,14 @@ HostKey + Home
 chsh -s /bin/zsh  
 ```
 
+**Btrfs关闭指定文件的写时复制(CoW)**
+```shell
+#关闭指定文件的CoW
+chattr +C /path/to/file
+#关闭指定文件夹的CoW，以后里面的新文件也会自动关闭CoW
+chattr +C /path/to/dir
+```
+
 **防止内核更新后找不到模块(适用于arch服务器)**
 ```bash
 sudo pacman -S kernel-modules-hook
