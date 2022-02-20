@@ -17,6 +17,12 @@ HostKey + Home
 chsh -s /bin/zsh  
 ```
 
+**一个替代软件查找网站(强烈推荐)**
+
+https://alternativeto.net/
+
+使用例：[Adobe Premiere Pro Alternatives for Linux](https://alternativeto.net/software/adobe-premiere-pro/?platform=linux)
+
 **冷知识**
 
     官方仓库里最长的包名是46个字符的
