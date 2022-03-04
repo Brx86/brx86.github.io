@@ -369,6 +369,9 @@ net start LxssManager    //启动
 **win10镜像直接下载**  
 https://www.microsoft.com/zh-cn/software-download/windows10ISO/
 
+**office2019专业增强版**
+http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/ProPlus2019Retail.img
+
 **paru**
 
 ```
