@@ -60,6 +60,17 @@ curl -L https://aya1.top/zsample >> .zshrc
 zsh
 ```
 
+**多github帐号的SSH key切换**
+https://www.cnblogs.com/zhangjianbin/p/6364459.html
+
+    Host github2
+    HostName github.com
+    User git
+    IdentityFile C:/Users/user/.ssh/id_rsa_work
+
+克隆时使用`git clone github2:user/repo.git`
+
+
 **更换tty字体**
 
 详见[Archwiki](https://wiki.archlinux.org/title/Linux_console_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E7%BB%88%E7%AB%AF%E5%AD%97%E4%BD%93#)
