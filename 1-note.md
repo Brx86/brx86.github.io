@@ -60,6 +60,13 @@ curl -L https://aya1.top/zsample >> .zshrc
 zsh
 ```
 
+**从文本读取下载地址，使用wget并行下载**
+![](https://bu.dusays.com/2022/03/29/b13828a55ce72.png)
+![](https://bu.dusays.com/2022/03/29/648cd0ccf183b.png)
+```bash
+fget(){thread=$2;thread=${thread:-5};echo "使用${thread}线程并行下载$1";cat $1 | xargs -n 1 -P ${thread} wget -q --show-progress ${@[@]:3}}
+```
+
 **多github帐号的SSH key切换**
 https://www.cnblogs.com/zhangjianbin/p/6364459.html
 
