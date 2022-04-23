@@ -12,7 +12,6 @@
 | Nursuo     | 1176****** | Nursuo      | #9752452   |
 | 要微笑     | 2460****** | kurumi      | #9743934   |
 | 上善若水   | 3470****** | ssruoshui   | #9752162   |
-| 独泽y      | 3577****** | ???le       | #9751942   |
+| 独泽y      | 3577****** | duze       | #9751942   |
 
-![图 1](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/51b2e8dd1f1f15990ff58805f27ba71bfab2dfc0643930fdf04b0b100eeb873a.png)  
-
+![图 1](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/7ddc7d5209cc46e75852ff8b40b2f46d49af858628a28651f2f2808e169f4373.png)  
