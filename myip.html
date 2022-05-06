@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PyScript App</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<body>
+<py-script>
+from urllib.request import urlopen
+
+with urlopen("http://v4.ip.zxinc.org/getip") as fp:
+    print(fp.read().decode())
+
+</py-script>
+</body>
+</html>
