@@ -9,9 +9,9 @@
 <py-script>
 from urllib.request import urlopen
 
-with urlopen("http://v4.ip.zxinc.org/getip") as fp:
-    print(fp.read().decode())
-
+fp= urlopen("http://v4.ip.zxinc.org/getip")
+print(fp.read().decode())
+fp.close()
 </py-script>
 </body>
 </html>
