@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PyScript App</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<py-env>
+    - requests
+</py-env>
+<body>
+<py-script>
+import requests
+
+
+def get_asn(ip):
+    api_url = "https://api.ip138.com/ip/"
+    params = {"ip": ip, "datatype": "jsonp"}
+    headers = {"token": "2cdf9eb1ae962f6133b38ac986a75696"}
+    r = requests.get(
+        api_url,
+        params=params,
+        headers=headers,
+    ).json()
+    if r.get("ret") == "ok":
+        ip_addr = " ".join(r.get("data"))
+        return f"ASN归属地:\n{ip_addr}"
+    return None
+
+
+print(get_asn("114.114.114.114"))
+
+</py-script>
+</body>
+</html>
