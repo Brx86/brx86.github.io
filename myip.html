@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>PyScript App</title>
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/>
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-</head>
-<body>
-<py-script>
-from urllib.request import urlopen
+<html>
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <body>
+    Your ip address:
+    <div id="outputDiv" class="font-mono"></div>
+    <py-script>
+from js import XMLHttpRequest
 
-fp= urlopen("http://v4.ip.zxinc.org/getip")
-print(fp.read().decode())
-fp.close()
-</py-script>
-</body>
+req = XMLHttpRequest.new()
+req.open("GET", "https://v4.ip.zxinc.org/getip", False)
+req.send(None)
+print(str(req.response))
+    </py-script>
+  </body>
 </html>
