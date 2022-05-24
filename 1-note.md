@@ -40,6 +40,13 @@ chattr +C /path/to/file
 chattr +C /path/to/dir
 ```
 
+**去除内核更新时候警告**
+```bash
+# 运行mkinitcpio时出现警告：==> WARNING: Possibly missing firmware for module: xxxx
+# 解决方法
+paru -S mkinitcpio-firmware
+```
+
 **防止内核更新后找不到模块(适用于arch服务器)**
 ```bash
 sudo pacman -S kernel-modules-hook
