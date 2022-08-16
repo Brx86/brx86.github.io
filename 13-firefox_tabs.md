@@ -22,13 +22,13 @@
 
 在此目录新建文件夹 `chrome` ，并写入 `userChrome.css`
 
-    wget https://raw.aya1.top/ranmaru22/firefox-vertical-tabs/main/userChrome.css -P chrome
+    wget https://raw.ay1.us/ranmaru22/firefox-vertical-tabs/main/userChrome.css -P chrome
 
 ### 2. 安装Tab Center Reborn拓展：
 
 点击安装拓展：[Tab Center Reborn](https://addons.mozilla.org/zh-CN/firefox/addon/tabcenter-reborn/)
 
-打开这个地址，全选复制自定义css：[tabCenterReborn.css](https://raw.aya1.top/ranmaru22/firefox-vertical-tabs/main/tabCenterReborn.css)
+打开这个地址，全选复制自定义css：[tabCenterReborn.css](https://raw.ay1.us/ranmaru22/firefox-vertical-tabs/main/tabCenterReborn.css)
 
 右键拓展图标，管理拓展，将复制的 **tabCenterReborn.css** 粘贴到自定义样式表
 
