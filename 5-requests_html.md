@@ -23,7 +23,7 @@ print(f'{title}\n盘后数据：{price}')
 
 ### Chromium下载速度过慢：
 
-![5.1](/pic/5.1.png)
+![图 1](/pic/5.1.png)
 
 #### 解决方法：
 

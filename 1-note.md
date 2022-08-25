@@ -1,5 +1,4 @@
 # Aya的杂乱小本本
-![](https://b23.tv/v8nrxqd)
 
 **arco镜像站**  https://ant.seedhost.eu/arcolinux/iso/
 
@@ -68,8 +67,8 @@ zsh
 ```
 
 **从文本读取下载地址，使用wget并行下载**
-![](https://bu.dusays.com/2022/03/29/b13828a55ce72.png)
-![](https://bu.dusays.com/2022/03/29/648cd0ccf183b.png)
+![图 1](https://bu.dusays.com/2022/03/29/b13828a55ce72.png)
+![图 2](https://bu.dusays.com/2022/03/29/648cd0ccf183b.png)
 ```bash
 fget(){thread=$2;thread=${thread:-5};echo "使用${thread}线程并行下载$1";cat $1 | xargs -n 1 -P ${thread} wget -q --show-progress ${@[@]:3}}
 ```

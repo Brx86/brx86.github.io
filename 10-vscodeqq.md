@@ -8,7 +8,7 @@ Linux下使用QQ有很多方案，比如linuxqq(不推荐)，electron-qq，com.q
 
 但还有一种方法：**[Vscode-QQ](https://github.com/takayama-lily/vscode-qq)**
 
-![图 1](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/84cfc65e744c884636d2d5072ba470af1e1653bc8fabf8303375af6b742d3ed3.png)  
+![图 1](/pic/10.1.png)  
 
 >  Vscode-QQ可以收发消息、查看历史消息、图片，回复、撤回、@、戳一戳、禁言、踢出，发送emoji、QQ表情与收藏表情……常用功能基本都有，但其中的一个功能用起来很麻烦：**发送图片**
 
@@ -32,7 +32,7 @@ Linux下使用QQ有很多方案，比如linuxqq(不推荐)，electron-qq，com.q
 
 设置自动保存与保存后复制文件路径（这里使用Flameshot，其他有复制路径功能的截图软件也可以）
 
-![图 2](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/e5113eb177b72814ec2838c37ad1fa4f6b8e0d59eae3fe194c4d027d11073abc.png)  
+![图 2](/pic/10.2.png)  
 
 ### 2. 安装AutoKey并编写脚本
 
@@ -50,7 +50,7 @@ keyboard.send_keys("<ctrl>+<enter>")
 
 设置一个快捷键，我这里使用的是**Super+F1**
 
-![图 3](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/b1207541ff5374332fdfc54d1b5678a1d4edafeb91efc98b3694d047e49402a2.png)  
+![图 3](/pic/10.3.png)  
 
 ### 3. 然后就可以愉快发送图片了！
 

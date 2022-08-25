@@ -11,7 +11,7 @@ Arch系常用的代理软件有**v2rayA**和**Qv2ray**。相比后者，v2rayA�
 
 v2rayA实际界面如图所示：
 
-![图 1](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/14f43276d4a275f1f9378b2167e5c5cbe5e68cee4cbfa88310bea9114ead784e.png)  
+![图 1](/pic/9.1.png)  
 
 
 ****
@@ -49,11 +49,11 @@ v2rayA实际界面如图所示：
    将“全局透明代理”和“规则端口的分流模式”都设置为GFWList，其他设置默认，点击保存并应用
 
 
-   ![图 2](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/057cba0e7807823d1ed960d0864cf89fb1ff34de809c49622f4c16e104d0655e.png)  
+   ![图 2](/pic/9.2.png)  
 
    回到主界面，点击导入订阅或节点链接
 
-   ![图 3](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/a2af761098b48644ba9ab35d25d5857250b0cf5cb7339b82633b8870d86deea7.png)  
+   ![图 3](/pic/9.3.png)  
 
 ## 然后就可以愉快使用节点了！
 
@@ -67,4 +67,4 @@ v2rayA实际界面如图所示：
 - 设置里点击“开启局域网共享”，点击“地址与端口”查看代理端口号，同一局域网下的设备均可通过ip与端口使用该设备的socks或http代理
 - 更多详细使用方法请参考[wiki](https://github.com/v2rayA/v2rayA/wiki/Home_zh)
 
-![图 4](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/14f43276d4a275f1f9378b2167e5c5cbe5e68cee4cbfa88310bea9114ead784e.png)
+![图 4](/pic/9.1.png)

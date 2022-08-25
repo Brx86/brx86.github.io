@@ -26,7 +26,7 @@ GLFW_IM_MODULE DEFAULT=ibus
 
 注意fcitx5的配置界面应如图所示，请确保添加“键盘”与“拼音”两个选项
 
-![](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/ca9c1c397eca53ae62388cf59abd5c3a7db059ea817fcdb0a339a37cfb398483.png)  
+![图 1](/pic/2.1.png)  
 
 
 ## Tips：
@@ -69,18 +69,18 @@ sudo pacman -Rsc fcitx
 
 配置文件位置：`~/.config/fcitx5/conf/pinyin.conf `
 
-![](/pic/2.2.png)
+![图 2](/pic/2.2.png)
 
 ### 可以安装fcitx5-nord、fcitx5-material-color等第三方皮肤：
 
 安装后在配置-附加组件-经典用户界面启用
 
-![](/pic/2.3.png)
+![图 3](/pic/2.3.png)
 
 横排，在程序中显示预编辑文本，fcitx5-material-color蓝色皮肤
 
-![](/pic/2.1.png)
+![图 4](/pic/2.4.png)
 
 竖排，不显示预编辑文本，fcitx5-nord暗色皮肤
 
-![](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/4e5366c1487fb2eb1067429ba6719049902c2d272d2f9ed8e1bd693d98d333e8.png)  
+![图 5](/pic/2.5.png)  
