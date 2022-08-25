@@ -34,8 +34,8 @@
 
 点击最下面的 `保存CSS` 按钮
 
-![](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/a13fea11471f59a14e4db7b5e92eaa923f195f90c5ed628b56887bb615d2ea7a.png)   
-![](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/6e3e4f077d8eb3cd9ec6a4d8f1ab40114a2e3dede68e6639c2697e0359bb7e62.png)  
+![图 1](/pic/13.1.png)   
+![图 2](/pic/13.2.png)  
 
 ### 3. 重启Firefox，享受无标签顶栏、有动态标签侧栏的火狐吧！
 

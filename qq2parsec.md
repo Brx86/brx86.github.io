@@ -23,4 +23,4 @@
 | 公主殿下     | 2534811613 | 1360613154600 | #9739626   |
 | 弦音碎风     | 2538****** | 2538128542    | #9802354   |
 
-![图 1](https://ayatale.coding.net/p/picbed/d/file/git/raw/master/bcfbff3b691a025c993e0e13b114b776c6d11dd00037f9d11e99f77d3c4c377c.png)
+![图 1](/pic/qq2parsec.md.1.png)
