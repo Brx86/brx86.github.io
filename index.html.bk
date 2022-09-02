@@ -77,7 +77,7 @@
     <div id="sakana-widget" style="position: fixed; bottom: 10px; right: 20px; z-index: 999;"></div>
     <script>
         function initSakanaWidget() {
-            new SakanaWidget().setCharacter('takina').mount('#sakana-widget');
+            new SakanaWidget().setState({ i: 0.01, d: 1 }).mount('#sakana-widget');
         }
     </script>
     <script async onload="initSakanaWidget()" src="assets/js/sakana.min.js"></script>
