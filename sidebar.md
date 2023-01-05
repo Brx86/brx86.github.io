@@ -14,4 +14,4 @@
 - [Firefox使用侧栏标签页](13-firefox_tabs)
 - **Links**
 - [![Github](assets/img/github.svg)Github](https://github.com/brx86)
-- [![zhullyb](assets/img/code.svg)zhullyb](https://zhullyb.top/)
+- [![zhullyb](assets/img/code.svg)zhullyb](https://zhul.in/)
