@@ -13,6 +13,13 @@ nano /etc/pacman.d/mirrorlist
 Server = https://mirrors.163.com/archlinux/$repo/os/$arch
 ```
 
+启用并行下载，关闭密钥验证（可选）
+
+```
+sed -i 's|#Parallel|Parallel|g' /etc/pacman.conf
+sed -i 's|SigLevel|SigLevel = Never\n#SigLevel|g' /etc/pacman.conf
+```
+
 #### **分区：cfdisk /dev/sda**
 
 > /dev/sda
@@ -84,9 +91,8 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 #### 设置时区与utc时间
 
 ```
-timedatectl set-timezone Asia/Shanghai
-timedatectl set-ntp true
-hwclock --systohc --utc
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+hwclock -w --utc
 ```
 
 
@@ -94,7 +100,7 @@ hwclock --systohc --utc
 
 ```
 useradd -m -G wheel aya
-sed -i 's|# %wheel ALL=(ALL) ALL|%wheel ALL=(ALL) ALL|g' /etc/sudoers
+echo '%wheel ALL=(ALL:ALL) ALL'>>/etc/sudoers
 ```
 
 设置密码
@@ -103,22 +109,11 @@ sed -i 's|# %wheel ALL=(ALL) ALL|%wheel ALL=(ALL) ALL|g' /etc/sudoers
 passwd aya
 ```
 
-#### 桌面环境装一个就行
-
-##### 1.安装cinnamon与网络/音频相关包
-
-```
-pacman -S xorg cinnamon xfce4-terminal lightdm-gtk-greeter-settings
-pacman -S pipewire-pulse pipewire-alsa pipewire-jack pavucontrol networkmanager
-systemctl enable lightdm
-systemctl enable NetworkManager
-```
-
-##### 2.安装xfce与网络/音频相关包
+#### 安装xfce与网络/音频相关包
 
 ```bash
-pacman -S xorg xfce4 xfce4-goodies lightdm-gtk-greeter-settings 
 pacman -S pipewire-pulse pipewire-alsa pipewire-jack pavucontrol network-manager-applet
+pacman -S xorg xfce4 xfce4-goodies lightdm-gtk-greeter-settings 
 systemctl enable lightdm
 systemctl enable NetworkManager
 ```
@@ -128,7 +123,6 @@ systemctl enable NetworkManager
 ```
 pacman -S grub efibootmgr os-prober dosfstools intel-ucode
 grub-install --efi-directory=/efi
-sed -i 's|#GRUB_DISABLE_OS_PROBER=false|GRUB_DISABLE_OS_PROBER=false|g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 

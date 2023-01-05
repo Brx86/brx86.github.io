@@ -22,7 +22,7 @@ sudo pacman -S lib32-pipewire lib32-pipewire-jack
 sudo pacman -S easyeffects
 ```
 
-#### 2.启用Pipewire相关服务：
+#### 2.启用Pipewire相关服务：（实测无需启用）
 
 ```shell
 systemctl enable pipewire --user

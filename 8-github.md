@@ -48,3 +48,4 @@ Demo地址：https://git.ay1.us/
 
 ![图 9](/pic/8.9.png)  
 
+同理，另一个项目 [netptop/siteproxy](https://github.com/netptop/siteproxy) 的部署方法也是一样的，详见项目主页

@@ -1,4 +1,4 @@
-# 随机返回Kemomimi酱图片的API
+# 随机返回Kemomimi酱图片的API（api已失效）
 
 
 
