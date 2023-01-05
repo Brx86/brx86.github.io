@@ -1,10 +1,12 @@
 # Aya反代与短网址服务
 
-**ay1.us**是我在*Cloudflare Worker*上搭建的反代服务
+`ay1.us`与`r.ay1.us`是我在*Cloudflare Worker*上搭建的反代服务
 
 主要用于下载用途，也可以代理git clone
 
-[源码](https://gitlab.com/NickCao/experiments/-/blob/master/workers/r.js)可以在这里获取到
+~~[源码](https://gitlab.com/NickCao/experiments/-/blob/master/workers/r.js)可以在这里获取到~~ ay1.us使用的源码作者删库了
+
+`r.ay1.us`/`aya1.eu.org`的源码可以在这里找到 [netptop/siteproxy](https://github.com/netptop/siteproxy)
 
 ## 反向代理使用方法：
 
@@ -13,8 +15,20 @@
 ```bash
 ❯ git clone https://ay1.us/https://github.com/ventoy/vtoyboot
 
-❯ wget https://ay1.us/https://github.com/Icalingua/Icalingua/releases/download/v2.4.3/Icalingua-2.4.3.AppImage
+❯ wget https://ay1.us/https://github.com/alist-org/alist/releases/download/v3.7.2/alist-linux-amd64.tar.gz
 ```
+
+在链接前加上`https://r.ay1.us/`或`https://aya1.eu.org/`，并去除后面的`:/`，如
+
+```bash
+❯ git clone https://aya1.eu.org/https/github.com/netptop/siteproxy
+
+❯ wget http://r.ay1.us/https/github.com/alist-org/alist/releases/download/v3.7.2/alist-linux-amd64.tar.gz
+```
+
+`r.ay1.us`/`aya1.eu.org` 同时还可以正常代理大部分网页，详见 [Readme](https://github.com/netptop/siteproxy/blob/master/README.md)
+
+**注意：** siteproxy使用强制替换字符串的方式代理请求，网页或文本内容中任何匹配的网址都会被套上反代，建议只用于访问简单网页或代理git，用于下载文件时可能出现内容被修改的情况。
 
 ## 短网址使用方法：
 1. 直接访问[网页端](https://s.ay1.us/)
@@ -43,3 +57,7 @@ https://ay1.us/vps2aya
 
 zinit备份：
 https://ay1.us/zinitbk
+
+
+## 或许可能的捐赠（随缘啦）
+![图 2](/pic/qc.jpg)
