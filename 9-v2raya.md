@@ -7,7 +7,7 @@
 
 因为众所周知的原因，国内连接github非常不稳定，因此在使用aur的过程中经常出现下载缓慢甚至无法下载的情况。除此之外，作为linux用户也常常需要到外网查询资料，这时一个靠谱的代理软件的重要性就显现出来了。arch/manjaro群日常：求助大佬，怎么挂代理
 
-Arch系常用的代理软件有**v2rayA**和**Qv2ray**。相比后者，v2rayA有安装方便无需插件，支持全局透明代理，支持RoutingA自定义规则，systemd服务无痕自启，可以部署到服务器或路由器等等诸多优点，配置简单，适合新手使用。至于Qv2ray，感兴趣的自己看[wiki](https://qv2ray.net/lang/zh/)去（逃）
+Arch系常用的代理软件有**v2rayA**和**Qv2ray**等。相比后者，v2rayA有安装方便无需插件，支持全局透明代理，支持RoutingA自定义规则，systemd服务无痕自启，可以部署到服务器或路由器等等诸多优点，配置简单，适合新手使用。至于Qv2ray，感兴趣的自己看[wiki](https://qv2ray.net/lang/zh/)去（逃）
 
 v2rayA实际界面如图所示：
 
@@ -26,12 +26,10 @@ v2rayA实际界面如图所示：
    Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
    ```
 
-2. ### 安装v2rayA与v2ray-core（或xray-core，二选一即可）
+2. ### 安装v2rayA与v2ray-core
 
    ```bash
-   # 两条命令二选一
    sudo pacman -Sy v2ray v2raya
-   sudo pacman -Sy xray v2raya
    ```
 
 3. ### 启动v2rayA服务（如果从aur安装会自动执行这步）
