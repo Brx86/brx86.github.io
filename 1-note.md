@@ -35,6 +35,13 @@ chattr +C /path/to/file
 chattr +C /path/to/dir
 ```
 
+#### 允许vbox访问硬盘
+执行以下命令并注销重新登录
+```bash
+sudo usermod -a -G disk $USER
+sudo usermod -a -G vboxusers $USER
+```
+
 #### 去除内核更新时的警告
 ```bash
 # 运行mkinitcpio时出现警告：==> WARNING: Possibly missing firmware for module: xxxx
