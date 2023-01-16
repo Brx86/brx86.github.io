@@ -22,7 +22,6 @@ v2rayA实际界面如图所示：
 
    ```bash
    [archlinuxcn]
-   SigLevel = Never
    Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
    ```
 
