@@ -24,6 +24,10 @@ v2rayA实际界面如图所示：
    [archlinuxcn]
    Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
    ```
+   然后安装密钥
+   ```bash
+   sudo pacman -Sy archlinuxcn-keyring
+   ```
 
 2. ### 安装v2rayA与v2ray-core
 
