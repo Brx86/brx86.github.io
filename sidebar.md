@@ -12,6 +12,7 @@
 - [Aya的小爬虫合集](11-pybili)
 - [Pipewire尝鲜](12-pipewire)
 - [Firefox使用侧栏标签页](13-firefox_tabs)
+- [拯救者R9000P设置电池充电阈值](14-battery)
 - **Links**
 - [![Github](assets/img/github.svg)Github](https://github.com/brx86)
 - [![zhullyb](assets/img/code.svg)zhullyb](https://zhul.in/)
