@@ -1,6 +1,6 @@
 # AMD CPU 调频
 
-## `amd_pstate`​ 驱动<sup>[[1]](https://wiki.archlinux.org/title/CPU_frequency_scaling)</sup>
+## `amd_pstate`​驱动
 
 > amd_pstate: This driver implements a scaling driver with an internal governor for AMD Ryzen (some Zen 2 and newer) processors.
 >
@@ -12,13 +12,13 @@
 
 ‍
 
-## `cpupower`​ 工具<sup>[[1]](https://wiki.archlinux.org/title/CPU_frequency_scaling)</sup>
+## `cpupower`​工具
 
 *cpupower* 是一组为辅助 CPU 调频而设计的用户空间工具。该软件包并非必须，但强烈建议安装，因为它提供了方便的命令行实用程序，并且内置 *systemd* 服务，可在启动时更改调频器。
 
 *cpupower* 的配置文件位于 `/etc/default/cpupower`​​。此配置文件由 `/usr/lib/systemd/scripts/cpupower`​​ 中的 bash 脚本读取，而该脚本由 *systemd* 通过 `cpupower.service`​​ 激活。若要在启动时启用 *cpupower*，请执行：`systemctl enable cpupower.service`​​
 
-可用的调速器<sup>[[2]](https://www.kernel.org/doc/Documentation/cpu-freq/governors.txt)</sup>：
+**可用的调速器：**
 
 | 调速器       | 描述                                                                                                |
 | ------------ | --------------------------------------------------------------------------------------------------- |
@@ -35,7 +35,7 @@
 * ​`schedutil`​ ：AMD 新款 CPU。
 * ​`powersave`​ ：Intel 使用 `intel_pstate`​ 驱动的 CPU(Sandy Bridge 和更新的 CPU)。
 
-常用命令 [[3]](https://man.archlinux.org/man/cpupower-frequency-set.1)：
+常用命令：
 
 ```bash
 # 查看所有CPU的频率
