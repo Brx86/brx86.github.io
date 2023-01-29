@@ -35,6 +35,22 @@ chattr +C /path/to/file
 chattr +C /path/to/dir
 ```
 
+#### Btrfs个人常用命令
+```shell
+# 列出btrfs子卷
+btrfs subvolume list <path>
+# 显示btrfs分区使用情况
+btrfs filesystem usage <path>
+# 对子卷进行快照
+btrfs subvolume snap <subvol1> <subvol2>
+# 删除子卷
+btrfs subvolume delete <subvol>
+# 查看默认子卷（ID 5 则为根子卷）
+btrfs subvolume get-default
+# 设置默认子卷
+btrfs subvolume set-default <subvol> <path>
+```
+
 #### 允许vbox访问硬盘
 执行以下命令并注销重新登录
 ```bash
