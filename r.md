@@ -8,6 +8,8 @@
 
 `r.ay1.us`/`aya1.eu.org`的源码可以在这里找到 [netptop/siteproxy](https://github.com/netptop/siteproxy)
 
+由于恶意请求过多，免费额度经常被用完，因此对来自中国以外ip的请求加了cf盾，境外的机子应该也不需要这反代吧
+
 ## 反向代理使用方法：
 
 在链接前加上`https://ay1.us/`，如
