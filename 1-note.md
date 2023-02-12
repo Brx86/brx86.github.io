@@ -104,10 +104,30 @@ https://www.cnblogs.com/zhangjianbin/p/6364459.html
     Host github2
     HostName github.com
     User git
-    IdentityFile C:/Users/user/.ssh/id_rsa_work
+    IdentityFile C:/Users/user/.ssh/id_rsa_2
 
 克隆时使用`git clone github2:user/repo.git`
 
+#### github commit用户名和邮箱不对，修改历史commit
+```bash
+git filter-branch --env-filter '
+
+OLD_EMAIL="oldmail@example.com"
+CORRECT_NAME="newname"
+CORRECT_EMAIL="newmail@example.com"
+
+if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
+then
+    export GIT_COMMITTER_NAME="$CORRECT_NAME"
+    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
+fi
+if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]
+then
+    export GIT_AUTHOR_NAME="$CORRECT_NAME"
+    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+fi
+' --tag-name-filter cat -- --branches --tags
+```
 
 #### 更换tty字体
 
