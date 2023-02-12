@@ -58,6 +58,12 @@ sudo usermod -a -G disk $USER
 sudo usermod -a -G vboxusers $USER
 ```
 
+#### 切换Esc和CapsLock
+在 `.xprofile` 添加：
+```bash
+setxkbmap -option "caps:swapescape"
+```
+
 #### 去除内核更新时的警告
 ```bash
 # 运行mkinitcpio时出现警告：==> WARNING: Possibly missing firmware for module: xxxx
@@ -365,6 +371,12 @@ net stop LxssManager    //停止
 net start LxssManager    //启动
 
 ```
+
+#### 读取主板的oem激活码
+```bash
+sudo cat /sys/firmware/acpi/tables/MSDM
+```
+
 #### win10镜像直接下载  
 https://www.microsoft.com/zh-cn/software-download/windows10ISO/
 
