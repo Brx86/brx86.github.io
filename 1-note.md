@@ -58,10 +58,18 @@ sudo usermod -a -G disk $USER
 sudo usermod -a -G vboxusers $USER
 ```
 
-#### 切换Esc和CapsLock
+#### CapsLock 自定义
 在 `.xprofile` 添加：
 ```bash
+# 完整可用映射列表见 /usr/share/X11/xkb/rules/evdev.lst
+# 交换capslock与esc
 setxkbmap -option "caps:swapescape"
+# 将capslock映射为esc键
+setxkbmap -option "caps:escape"
+# 将capslock映射为backspace键
+setxkbmap -option "caps:backspace"
+# num lock无效，小键盘永远输入数字而不是方向
+setxkbmap -option "numpad:mac"
 ```
 
 #### 去除内核更新时的警告
@@ -89,16 +97,6 @@ bash -c "$(curl -fsSL https://git.io/zinit-install)"
 chsh -s /bin/zsh
 curl -L https://ay1.us/zsample >> .zshrc
 zsh
-```
-
-#### Caps Lock 修改
-```bash
-# 将以下内容写入.xprofile
-# 完整可用映射列表可见 /usr/share/X11/xkb/rules/evdev.lst
-# 将capslock映射为esc键
-setxkbmap -option "caps:escape"
-# num lock无效，小键盘永远输入数字而不是方向
-setxkbmap -option "numpad:mac"
 ```
 
 #### 从文本读取下载地址，使用wget并行下载
