@@ -91,6 +91,16 @@ curl -L https://ay1.us/zsample >> .zshrc
 zsh
 ```
 
+#### Caps Lock 修改
+```bash
+# 将以下内容写入.xprofile
+# 完整可用映射列表可见 /usr/share/X11/xkb/rules/evdev.lst
+# 将capslock映射为esc键
+setxkbmap -option "caps:escape"
+# num lock无效，小键盘永远输入数字而不是方向
+setxkbmap -option "numpad:mac"
+```
+
 #### 从文本读取下载地址，使用wget并行下载
 ![图 1](https://bu.dusays.com/2022/03/29/b13828a55ce72.png)
 ![图 2](https://bu.dusays.com/2022/03/29/648cd0ccf183b.png)
