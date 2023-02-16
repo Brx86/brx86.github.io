@@ -203,6 +203,21 @@ yay --nodiffmenu --nocleanmenu --editmenu --editor nano --save
 yay -Pg #查看当前yay配置
 ```
 
+#### Caddyfile 反代
+```
+https://example.com {
+  encode gzip
+  tls example@example.com
+  reverse_proxy https://www.google.com {
+    header_up Host {http.reverse_proxy.upstream.hostport}
+    header_up X-Real-IP {http.request.remote}
+    header_up X-Forwarded-For {http.request.remote}
+    header_up X-Forwarded-Port {http.request.port}
+    header_up X-Forwarded-Proto {http.request.scheme}
+  }
+}
+```
+
 #### flv/mkv -> mp4  
 ```shell
 ffmpeg -i "xxx.mkv" -vcodec copy -acodec copy "xxx.mp4"  
