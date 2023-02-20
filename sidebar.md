@@ -14,6 +14,7 @@
 - [Firefox使用侧栏标签页](13-firefox_tabs)
 - [拯救者设置电池充电阈值](14-battery)
 - [AMD CPU 调频](15-amd-cpufreq)
+- [v2raya自动选择节点脚本](16-autoaya)
 - **Links**
 - [![Github](assets/img/github.svg)Github](https://github.com/brx86)
 - [![zhullyb](assets/img/code.svg)zhullyb](https://zhul.in/)
