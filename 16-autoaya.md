@@ -18,7 +18,9 @@ crontab 示例：
 ```
 
 运行效果：
+
 ![图1](/pic/16.1.png)
+
 ## 代码：
 ```python
 #!/usr/bin/env python
