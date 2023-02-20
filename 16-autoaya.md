@@ -5,7 +5,7 @@
     ```bash
     sudo pacman -Sy python-httpx
     ```
-2. 新建脚本，粘贴下面的[代码](/#/16-autoaya?id=代码：)，并在底部修改 user passwd 等参数
+2. 新建脚本，粘贴下面的[代码](/#/16-autoaya?id=%e4%bb%a3%e7%a0%81%ef%bc%9a)，并在底部修改 user passwd 等参数
 
 直接运行：
 ```bash
