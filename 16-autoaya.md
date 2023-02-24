@@ -5,7 +5,7 @@
     ```bash
     sudo pacman -Sy python-httpx
     ```
-2. 新建脚本，粘贴下面的[代码](https://fars.ee/js7z/py)，并在底部修改 user passwd 等参数
+2. 新建脚本，粘贴下面的[代码](https://fars.ee/Rf86/py)，并在底部修改 user passwd 等参数
 
 直接运行：
 ```bash
@@ -29,7 +29,7 @@ crontab 示例：
 @File    :   autoaya.py
 @Time    :   2023/02/20 16:28:10
 @Author  :   Ayatale 
-@Version :   1.1
+@Version :   1.3
 @Contact :   ayatale@qq.com
 @Github  :   https://github.com/brx86/
 @Desc    :   自动更新订阅，选择最快的节点连接
@@ -176,18 +176,19 @@ class AutoAya:
         self.v2raya("update")  # 更新订阅
         sub_list, connected_list = self.get_sublist()  # 获取订阅节点列表
         sorted_list = self.test_list(len(sub_list))  # 对节点进行测速排序
-        self.v2raya("stop")  # 停止 v2raya
+        # self.v2raya("stop")  # 停止 v2raya
+        for _ in sorted_list:
+            print(f"Server {_[0]}\tDelay: {_[1]}ms")
+            self.v2raya("connect", pid=_[0])  # 连接新节点
         if connected_list:
-            for p in connected_list:
-                self.v2raya("disconnect", pid=p["id"])  # 断开之前的节点
-        for p in sorted_list:
-            print(f"Server {p[0]}\tDelay: {p[1]}ms")
-            self.v2raya("connect", pid=p[0])  # 连接新节点
-        self.v2raya("start")  # 启动 v2raya
+            for _ in connected_list:
+                self.v2raya("disconnect", pid=_["id"])  # 断开之前的节点
+        self.v2raya("start")  # 确保启动 v2raya
 
 
 if __name__ == "__main__":
-    user = "user"
-    passwd = "passwd"
-    AutoAya(user, passwd, sub=0).run()
+    user = "user"  # 此处填写 v2raya 的用户名
+    passwd = "passwd"  # 此处填写 v2raya 的密码
+    autoaya = AutoAya(user, passwd, sub=0)
+    autoaya.run()
 ```
