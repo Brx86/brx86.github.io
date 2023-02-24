@@ -5,7 +5,7 @@
     ```bash
     sudo pacman -Sy python-httpx
     ```
-2. 新建脚本，粘贴下面的[代码](https://fars.ee/Rf86/py)，并在底部修改 user passwd 等参数
+2. 新建脚本，粘贴下面的[代码](https://fars.ee/aMEY/py)，并在底部修改 user passwd 等参数
 
 直接运行：
 ```bash
@@ -180,9 +180,9 @@ class AutoAya:
         for _ in sorted_list:
             print(f"Server {_[0]}\tDelay: {_[1]}ms")
             self.v2raya("connect", pid=_[0])  # 连接新节点
-        if connected_list:
-            for _ in connected_list:
-                self.v2raya("disconnect", pid=_["id"])  # 断开之前的节点
+        if disconnect_list := connected_list.difference({_[0] for _ in sorted_list}):
+            for _ in disconnect_list:
+                self.v2raya("disconnect", pid=_)  # 断开之前的节点
         self.v2raya("start")  # 确保启动 v2raya
 
 
