@@ -11,7 +11,6 @@
 - [使用AutoKey在Vscode-QQ快速发送图片](10-vscodeqq)
 - [Aya的小爬虫合集](11-pybili)
 - [Pipewire尝鲜](12-pipewire)
-#- [Firefox使用侧栏标签页](13-firefox_tabs)
 - [拯救者设置电池充电阈值](14-battery)
 - [AMD CPU 调频](15-amd-cpufreq)
 - [v2raya自动选择节点脚本](16-autoaya)
