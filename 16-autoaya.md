@@ -5,7 +5,7 @@
     ```bash
     sudo pacman -Sy python-httpx
     ```
-2. 新建脚本，粘贴下面的[代码](https://fars.ee/aMEY/py)，并在底部修改 user passwd 等参数
+2. 新建脚本，粘贴下面的[代码](https://fars.ee/w6jv/py)，并在底部修改 user passwd 等参数
 
 直接运行：
 ```bash
@@ -29,7 +29,7 @@ crontab 示例：
 @File    :   autoaya.py
 @Time    :   2023/02/20 16:28:10
 @Author  :   Ayatale 
-@Version :   1.3
+@Version :   1.4
 @Contact :   ayatale@qq.com
 @Github  :   https://github.com/brx86/
 @Desc    :   自动更新订阅，选择最快的节点连接
@@ -67,13 +67,13 @@ class AutoAya:
         )
         r.raise_for_status
         token = r.json()["data"]["token"]
-        self.client = httpx.Client(headers={"Authorization": token}, timeout=20)
+        self.client = httpx.Client(headers={"Authorization": token}, timeout=30)
 
     def get_sublist(self):
         """获取订阅的节点列表"""
         result = self.client.get(f"{self.api}/touch").json()
         sub_list = result["data"]["touch"]["subscriptions"][self.sub]["servers"]
-        connected_list = result["data"]["touch"]["connectedServer"]
+        connected_list = {_["id"] for _ in result["data"]["touch"]["connectedServer"]}
         return sub_list, connected_list
 
     def sort_list(self, http_list: list):
@@ -176,7 +176,7 @@ class AutoAya:
         self.v2raya("update")  # 更新订阅
         sub_list, connected_list = self.get_sublist()  # 获取订阅节点列表
         sorted_list = self.test_list(len(sub_list))  # 对节点进行测速排序
-        # self.v2raya("stop")  # 停止 v2raya
+        self.v2raya("stop")  # 停止 v2raya
         for _ in sorted_list:
             print(f"Server {_[0]}\tDelay: {_[1]}ms")
             self.v2raya("connect", pid=_[0])  # 连接新节点
