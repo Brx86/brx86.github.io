@@ -18,7 +18,7 @@ contentvec ：[checkpoint_best_legacy_500.pt](https://ibm.box.com/s/z1wgl1stco8f
 
 ## 下载珂朵莉模型
 
-地址：[https://drive.google.com/drive/folders/1YzC6XAtXiTsAIzrzrQGhybBFZnGwhf7j](地址：https://drive.google.com/drive/folders/1YzC6XAtXiTsAIzrzrQGhybBFZnGwhf7j)
+地址：[https://drive.google.com/drive/folders/1YzC6XAtXiTsAIzrzrQGhybBFZnGwhf7j](https://drive.google.com/drive/folders/1YzC6XAtXiTsAIzrzrQGhybBFZnGwhf7j)
 
 将其中的 `config.json`​ `G_10400.pth`​ `kmeans_10000.pt`​ 放在 `chtholly`​ 目录下（也可以放在别的地方，自己记住就行）
 
