@@ -35,6 +35,17 @@ chattr +C /path/to/file
 chattr +C /path/to/dir
 ```
 
+#### Chatgpt相关
+    能本地部署的chatgpt下位替代
+    https://github.com/THUDM/ChatGLM-6B
+    https://github.com/BlinkDL/ChatRWKV
+
+    能使用api或网页cookie部署的chatgpt镜像站
+    https://github.com/Chanzhaoyu/chatgpt-web
+    https://github.com/ddiu8081/chatgpt-demo
+    https://github.com/ourongxing/chatgpt-vercel
+
+
 #### Btrfs个人常用命令
 ```shell
 # 列出btrfs子卷
