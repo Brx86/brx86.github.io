@@ -45,7 +45,6 @@ chattr +C /path/to/dir
     https://github.com/ddiu8081/chatgpt-demo
     https://github.com/ourongxing/chatgpt-vercel
 
-
 #### Btrfs个人常用命令
 ```shell
 # 列出btrfs子卷
@@ -60,6 +59,12 @@ btrfs subvolume delete <subvol>
 btrfs subvolume get-default
 # 设置默认子卷
 btrfs subvolume set-default <subvol> <path>
+```
+
+#### nmcli连接指定wifi
+```bash
+nmcli dev wifi  # 扫描可用wifi
+nmcli d wifi connect XX:XX:XX:XX:XX:XX  # 连接指定BSSID的wifi
 ```
 
 #### 允许vbox访问硬盘
