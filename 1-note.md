@@ -111,7 +111,7 @@ faillock --reset --user <username>
 sudo pacman -Sy zsh lua git pkgfile
 bash -c "$(curl -fsSL https://git.io/zinit-install)"
 chsh -s /bin/zsh
-curl -L https://ay1.us/zsample >> .zshrc
+curl https://fars.ee/MLeY >> .zshrc
 zsh
 ```
 
