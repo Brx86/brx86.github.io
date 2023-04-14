@@ -122,6 +122,14 @@ zsh
 fget(){thread=$2;thread=${thread:-5};echo "使用${thread}线程并行下载$1";cat $1 | xargs -n 1 -P ${thread} wget -q --show-progress ${@[@]:3}}
 ```
 
+## 查看每个包设置的backup标记
+```bash
+pacman -Qii <pkgname> # 最后两行
+```
+
+## 修改fontconfig的图形工具
+fontweak 简单好用
+
 #### 多github帐号的SSH key切换
 https://www.cnblogs.com/zhangjianbin/p/6364459.html
 
