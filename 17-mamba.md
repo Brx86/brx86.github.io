@@ -1,6 +1,7 @@
 # 使用Mamba作为Conda替代品
+
 > **Conda or Mamba for production?**
-> 
+>
 > https://labs.epi2me.io/conda-or-mamba-for-production/
 
 前几年第一次用 micromamba 的时候还有一些问题，没想到现在已经这么好用了。单文件无依赖便于安装，运行和安装速度完全吊打 conda ，这些足以完美替代 conda 了。
@@ -32,8 +33,8 @@ channels:
   - conda-forge
 show_channel_urls: true
 custom_channels:
-  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  conda-forge: https://mirrors.bfsu.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud
 ```
 
 ## 4. 创建新环境测试
