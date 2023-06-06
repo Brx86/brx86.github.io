@@ -11,15 +11,15 @@
 sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-moegirl fcitx5-pinyin-zhwiki
 ```
 
-### 2. 新建或修改 `~/.pam_environment` ，添加以下几行：
+### 2. 新建或修改 `~/.xprofile` ，添加以下几行：
 
 ```shell
-GTK_IM_MODULE DEFAULT=fcitx
-QT_IM_MODULE  DEFAULT=fcitx
-XMODIFIERS    DEFAULT=\@im=fcitx
-INPUT_METHOD  DEFAULT=fcitx
-SDL_IM_MODULE DEFAULT=fcitx
-GLFW_IM_MODULE DEFAULT=ibus
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+export INPUT_METHOD=fcitx
+export SDL_IM_MODULE=fcitx
+export GLFW_IM_MODULE=ibus
 ```
 
 ### 3. 保存，注销重新登录，然后在托盘图标右键详细配置即可愉快使用！
@@ -64,6 +64,8 @@ sudo pacman -Rsc fcitx
     fcitx5-pinyin-moegirl：outloudvi根据萌娘百科创建的词库（涵盖了许多有意思的名词）
 
     fcitx5-pinyin-zhwiki：felixonmars根据中文维基百科创建的词库（肥猫百万大词库nb！）
+
+    fcitx5-pinyin-custom-pinyin-dictionary: 另一个百万级中文词库，比zhwiki更新更全，推荐使用
 
 ### 部分好用的设置（云拼音，候选词数量等）还可以通过修改配置文件启用：
 
