@@ -16,12 +16,12 @@ paru -S micromamba-bin
 ## 2. 配置 shellrc
 
 ```bash
-# 初始化，--shell 后填自己使用的 shell ，--prefix 后填虚拟环境的保存路径，默认为 ~/micromamba
-micromamba shell init --shell=zsh --prefix=~/.local/share/micromamba
+# 初始化，-s 后填自己使用的 shell ，-p 后填虚拟环境的保存路径，默认为 ~/micromamba
+micromamba shell init -s zsh -p ~/.local/share/micromamba
 # 习惯 conda 命令 ，alias 一下
 echo 'alias conda=micromamba' >> ~/.zshrc
 # 重新加载当前 shell（ bash，fish 等同理）
-zsh;exit
+exec zsh
 ```
 
 ## 3. 配置 ~/.condarc
