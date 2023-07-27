@@ -53,7 +53,7 @@
    按回车键退出...
    ```
 
-   结果示例: https://note.ay1.us/bili/tuan
+   结果示例: https://note.aya1.eu.org/bili/tuan
 
    
 

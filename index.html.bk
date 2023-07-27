@@ -44,7 +44,7 @@
             // NAVIGATION
             // -----------------------------------------------------------------
             alias: {
-                '.*?/changelog': 'https://raw.ay1.us/jhildenbiddle/docsify-themeable/master/CHANGELOG.md',
+                '.*?/changelog': 'https://raw.aya1.eu.org/jhildenbiddle/docsify-themeable/master/CHANGELOG.md',
             },
             auto2top: true,
             maxLevel: 3,
