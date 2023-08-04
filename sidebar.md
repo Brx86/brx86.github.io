@@ -18,3 +18,4 @@
 - **Links**
 - [![Github](assets/img/github.svg)Github](https://github.com/brx86)
 - [![zhullyb](assets/img/code.svg)zhullyb](https://zhul.in/)
+- [![yidaozhan](assets/img/code.svg)zhullyb](https://blog.yidaozhan.top/)
