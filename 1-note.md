@@ -35,6 +35,18 @@ chattr +C /path/to/file
 chattr +C /path/to/dir
 ```
 
+#### 睡眠/休眠后cuda无法正常使用
+https://wiki.archlinux.org/title/NVIDIA/Tips_and_tricks#Preserve_video_memory_after_suspend
+
+新建 `/etc/modprobe.d/nvidia-power-management.conf` ，内容为：
+```
+options nvidia NVreg_PreserveVideoMemoryAllocations=1 NVreg_TemporaryFilePath=/path/to/tmp-nvidia
+```
+然后启用服务
+```shell
+sudo systemctl enable nvidia-suspend.service nvidia-hibernate.service
+```
+
 #### Chatgpt相关
     能本地部署的chatgpt下位替代
     https://github.com/THUDM/ChatGLM-6B
