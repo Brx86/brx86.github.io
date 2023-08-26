@@ -26,7 +26,7 @@
 | powersave    | 运行于最小频率（见 `/sys/devices/system/cpu/cpuX/cpufreq/scaling_min_freq`​​）                      |
 | userspace    | 运行于用户指定的频率（可设置 `/sys/devices/system/cpu/cpuX/cpufreq/scaling_setspeed`​​）            |
 | ondemand     | 按需快速动态调整 CPU 频率， 一有 cpu 计算量的任务，就会立即达到最大频率运行，空闲时间增加就降低频率 |
-| conservative | 按需快速动态调整 CPU 频率， 但比 ondemand 的调整更保守，优雅地增加与减少频率而不是跳跃              |
+| conservative | 按需快速动态调整 CPU 频率， 但比 ondemand 的调整更保守，平滑地增加与减少频率而不是跳跃              |
 | schedutil    | 基于调度程序调整 CPU 频率，旨在与 Linux 内核调度程序更好地集成                                      |
 
 根据实际硬件，以下的调速器可能被默认启用：
