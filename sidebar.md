@@ -15,6 +15,9 @@
 - [AMD CPU 调频](15-amd-cpufreq)
 - [v2raya自动选择节点脚本](16-autoaya)
 - [使用Mamba作为Conda替代品](17-mamba)
+- [Linux应用墓碑](18-xstop)
+- [EXE 转 SWF](19-exe2swf)
+
 - **Links**
 - [![Github](assets/img/github.svg)Github](https://github.com/brx86)
 - [![zhullyb](assets/img/code.svg)zhullyb](https://zhul.in/)
