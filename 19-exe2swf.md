@@ -2,7 +2,7 @@
 
 > 最近在和室友打死神vs火影和海贼vs妖尾，后者官方只提供了flashplayer17打包的exe，不知为何在我电脑上运行总是无响应。
 >
-> 尝试拆exe失败，在flashpoint的wiki上找到了解决方法。
+> 尝试拆 exe 失败，在 flashpoint 的 wiki 上找到了解决方法。
 
 ## 1. Wiki链接
 https://flashpointarchive.org/datahub/Extracting_Flash_Games
