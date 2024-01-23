@@ -52,14 +52,5 @@
 # 然后访问 https://aya1.eu.org/bPjk7C 即可
 ```
 
-## Aya个人常用短网址：
-
-vps2aya脚本：
-https://aya1.eu.org/vps2aya
-
-zinit备份：
-https://aya1.eu.org/zinitbk
-
-
 ## 或许可能的捐赠（随缘啦）
 ![图 2](/pic/qc.jpg)
