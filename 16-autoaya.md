@@ -5,7 +5,7 @@
     ```bash
     sudo pacman -Sy python-httpx
     ```
-2. 新建脚本，粘贴下面的[代码](https://fars.ee/w6jv/py)，并在底部修改 user passwd 等参数
+2. 新建脚本，粘贴下面的[代码](https://fars.ee/ggDq/py)，并在底部修改 user passwd 等参数
 
 直接运行：
 ```bash
@@ -14,28 +14,28 @@ python autoaya.py
 
 crontab 示例：
 ```bash
-*/30 * * * * python /home/aya/autoaya.py
+0 4 * * * python /home/aya/autoaya.py
 ```
 
 运行效果：
 
-![图1](/pic/16.1.png)
+![图1](/pic/16.1.jpg)
 
 ## 代码：
 ```python
 #!/usr/bin/env python
-# -*- encoding: utf-8 -*-
 """
 @File    :   autoaya.py
-@Time    :   2023/02/20 16:28:10
+@Time    :   2024/02/11 16:58:23
 @Author  :   Ayatale 
-@Version :   1.4
+@Version :   1.5
 @Contact :   ayatale@qq.com
 @Github  :   https://github.com/brx86/
 @Desc    :   自动更新订阅，选择最快的节点连接
 """
 
-import httpx, json
+import httpx
+import json
 
 
 class AutoAya:
@@ -58,6 +58,7 @@ class AutoAya:
         """
         self.api = f"http://127.0.0.1:{port}/api"
         self.sub, self.limit = sub, limit
+        self.sublist = []
         r = httpx.post(
             f"{self.api}/login",
             json={
@@ -69,14 +70,15 @@ class AutoAya:
         token = r.json()["data"]["token"]
         self.client = httpx.Client(headers={"Authorization": token}, timeout=30)
 
-    def get_sublist(self):
+    def get_sublist(self) -> set[int]:
         """获取订阅的节点列表"""
         result = self.client.get(f"{self.api}/touch").json()
-        sub_list = result["data"]["touch"]["subscriptions"][self.sub]["servers"]
+        raw_list = result["data"]["touch"]["subscriptions"][self.sub]["servers"]
+        self.sublist = {i["id"]: i["name"] for i in raw_list}
         connected_list = {_["id"] for _ in result["data"]["touch"]["connectedServer"]}
-        return sub_list, connected_list
+        return connected_list
 
-    def sort_list(self, http_list: list):
+    def sort_list(self, http_list: list) -> list[tuple[int, int]]:
         """对测速后的节点列表进行排序
 
         Args:
@@ -92,7 +94,7 @@ class AutoAya:
         for p in http_list:
             if p["pingLatency"].endswith("ms"):
                 latency = int(p["pingLatency"][:-2])
-                if latency < self.limit:
+                if (latency < self.limit) and ("GPT" not in self.sublist[p["id"]]):
                     test_result[p["id"]] = latency
         sorted_result = sorted(test_result.items(), key=lambda x: x[1])
         if not sorted_result:
@@ -101,7 +103,7 @@ class AutoAya:
             return sorted_result
         return sorted_result[:5]
 
-    def test_list(self, num: int):
+    def test_list(self) -> list[tuple[int, int]]:
         """节点测速
 
         Args:
@@ -110,18 +112,22 @@ class AutoAya:
         Returns:
             list: 测速后延迟前五的节点列表
         """
-        print(f"HTTP testing...", end="")
+        print("HTTP testing...")
         plist = [
-            {"id": i, "_type": "subscriptionServer", "sub": self.sub}
-            for i in range(1, num + 1)
+            {"id": i + 1, "_type": "subscriptionServer", "sub": self.sub}
+            for i in range(len(self.sublist))
         ]
         result = self.client.get(
             f"{self.api}/httpLatency",
             params={"whiches": json.dumps(plist)},
         ).json()
-        http_list = result["data"]["whiches"]
-        print(f"Finished!")
-        return self.sort_list(http_list)
+        try:
+            http_list = result["data"]["whiches"]
+            print("Finished!")
+            return self.sort_list(http_list)
+        except Exception as e:
+            print(repr(e), result)
+            exit(1)
 
     def v2raya(self, action: str, pid: int = 1):
         """对 v2raya 的操作
@@ -167,28 +173,28 @@ class AutoAya:
                         "outbound": "proxy",
                     },
                 )
-                print(f"Disconnect server {pid}...")
             case _:
                 print("Unknown Action!")
 
     def run(self):
         """开始运行"""
         self.v2raya("update")  # 更新订阅
-        sub_list, connected_list = self.get_sublist()  # 获取订阅节点列表
-        sorted_list = self.test_list(len(sub_list))  # 对节点进行测速排序
+        connected_list = self.get_sublist()  # 获取订阅节点列表
+        sorted_list = self.test_list()  # 对节点进行测速排序
         self.v2raya("stop")  # 停止 v2raya
-        for _ in sorted_list:
-            print(f"Server {_[0]}\tDelay: {_[1]}ms")
-            self.v2raya("connect", pid=_[0])  # 连接新节点
+        for pid, delay in sorted_list:
+            print(f"Server {pid}\tDelay: {delay}ms\t{self.sublist[pid]}")
+            self.v2raya("connect", pid)  # 连接新节点
         if disconnect_list := connected_list.difference({_[0] for _ in sorted_list}):
-            for _ in disconnect_list:
-                self.v2raya("disconnect", pid=_)  # 断开之前的节点
-        self.v2raya("start")  # 确保启动 v2raya
+            for pid in disconnect_list:
+                print(f"Disconnect server {pid}\t{self.sublist[pid]}")
+                self.v2raya("disconnect", pid)  # 断开之前的节点
+        self.v2raya("start")  # 启动 v2raya
 
 
 if __name__ == "__main__":
-    user = "user"  # 此处填写 v2raya 的用户名
-    passwd = "passwd"  # 此处填写 v2raya 的密码
+    user = "aya"  # 此处填写 v2raya 的用户名
+    passwd = "aya"  # 此处填写 v2raya 的密码
     autoaya = AutoAya(user, passwd, sub=0)
     autoaya.run()
 ```
