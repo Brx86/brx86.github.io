@@ -46,6 +46,18 @@ options nvidia NVreg_PreserveVideoMemoryAllocations=1 NVreg_TemporaryFilePath=/p
 ```shell
 sudo systemctl enable nvidia-suspend.service nvidia-hibernate.service
 ```
+#### 更好的shell历史
+https://github.com/atuinsh/atuin
+
+rust写的，使用sqlite，更好的shell历史
+```shell
+pacman -S atuin # 安装本体
+atuin import auto # 导入历史
+.xxshrc # 看文档加入配置，zinit如下
+zinit ice lucid wait='1'
+zinit light atuinsh/atuin 
+```
+`~/.config/atuin/config.toml` 里设置 `filter_mode_shell_up_key_binding = "directory`
 
 #### Chatgpt相关
     能本地部署的chatgpt下位替代
