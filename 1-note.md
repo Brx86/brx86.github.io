@@ -59,6 +59,11 @@ zinit light atuinsh/atuin
 ```
 `~/.config/atuin/config.toml` 里设置 `filter_mode_shell_up_key_binding = "directory`
 
+#### micro编辑器
+透明主题：https://github.com/zyedidia/micro/issues/1339#issuecomment-1943357353
+conf高亮：https://github.com/zyedidia/micro/issues/2179
+滚动条： `set scrollbar on`
+
 #### Chatgpt相关
     能本地部署的chatgpt下位替代
     https://github.com/THUDM/ChatGLM-6B
