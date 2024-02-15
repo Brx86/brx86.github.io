@@ -28,7 +28,7 @@
 ❯ wget http://r.aya1.eu.org/https/github.com/alist-org/alist/releases/download/v3.7.2/alist-linux-amd64.tar.gz
 ```
 
-`r.aya1.eu.org`/`aya1.eu.org` 同时还可以正常代理大部分网页，详见 [Readme](https://github.com/netptop/siteproxy/blob/master/README.md)
+`r.aya1.eu.org` 同时还可以正常代理大部分网页，详见 [Readme](https://github.com/netptop/siteproxy/blob/master/README.md)
 
 **注意：** siteproxy使用强制替换字符串的方式代理请求，网页或文本内容中任何匹配的网址都会被套上反代，建议只用于访问简单网页或代理git，用于下载文件时可能出现内容被修改的情况。
 
