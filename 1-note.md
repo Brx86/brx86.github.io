@@ -156,12 +156,12 @@ zsh
 fget(){thread=$2;thread=${thread:-5};echo "使用${thread}线程并行下载$1";cat $1 | xargs -n 1 -P ${thread} wget -q --show-progress ${@[@]:3}}
 ```
 
-## 查看每个包设置的backup标记
+#### 查看每个包设置的backup标记
 ```bash
 pacman -Qii <pkgname> # 最后两行
 ```
 
-## 修改fontconfig的图形工具
+#### 修改fontconfig的图形工具
 fontweak 简单好用
 
 #### 多github帐号的SSH key切换
@@ -499,3 +499,10 @@ http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-
 
 4. paru -Gc可以直接显示某个包的评论区；
 ```
+
+#### 看漫画
+tachiyomi 已收到警告停更
+
+现用：https://github.com/mihonapp/mihon
+
+启动后添加仓库：https://github.com/keiyoushi/extensions/raw/repo/index.min.json
