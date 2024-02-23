@@ -66,3 +66,4 @@ cpupower frequency-set -g conservative
 1. [Arch Wiki：CPU 调频](https://wiki.archlinux.org/title/CPU_frequency_scaling)
 2. [Kernel：cpu-freq/governors.txt](https://www.kernel.org/doc/Documentation/cpu-freq/governors.txt)
 3. [Arch Man Pages：cpupower-frequency-set](https://man.archlinux.org/man/cpupower-frequency-set.1)
+4. [Redhat：使​​​​​​​用​​​​​​​ CPUfreq 调​​​​​​​节​​​​​​​器​​​​​​​](https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/6/html/power_management_guide/cpufreq_governors)
