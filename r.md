@@ -6,7 +6,7 @@
 
 ~~[源码](https://gitlab.com/NickCao/experiments/-/blob/master/workers/r.js)可以在这里获取到~~ `aya1.eu.org`使用的源码作者删库了，这是我的[备份](https://fars.ee/ypXF/js)
 
-`r.aya1.eu.org`/`aya1.eu.org`的源码可以在这里找到 [netptop/siteproxy](https://github.com/netptop/siteproxy)
+`r.aya1.eu.org`的源码可以在这里找到 [netptop/siteproxy](https://github.com/netptop/siteproxy)
 
 由于恶意请求过多，免费额度经常被用完，因此对来自中国以外ip的请求加了cf盾，境外的机子应该也不需要这反代吧
 
@@ -20,10 +20,10 @@
 ❯ wget https://aya1.eu.org/https://github.com/alist-org/alist/releases/download/v3.7.2/alist-linux-amd64.tar.gz
 ```
 
-在链接前加上`https://r.aya1.eu.org/`或`https://aya1.eu.org/`，并去除后面的`:/`，如
+在链接前加上`https://r.aya1.eu.org/`，并去除后面的`:/`，如
 
 ```bash
-❯ git clone https://aya1.eu.org/https/github.com/netptop/siteproxy
+❯ git clone https://r.aya1.eu.org/https/github.com/netptop/siteproxy
 
 ❯ wget http://r.aya1.eu.org/https/github.com/alist-org/alist/releases/download/v3.7.2/alist-linux-amd64.tar.gz
 ```
