@@ -505,4 +505,4 @@ tachiyomi 已收到警告停更
 
 现用：https://github.com/mihonapp/mihon
 
-启动后添加仓库：https://github.com/keiyoushi/extensions/raw/repo/index.min.json
+启动后添加仓库：https://raw.aya1.eu.org/keiyoushi/extensions/repo/index.min.json
