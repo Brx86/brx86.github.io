@@ -6,18 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
-    <meta name="description"
-        content="Arch安装手册 Aya反代服务 Aya的杂乱小本本 Arch系安装并配置fcitx5输入法 Github反向代理 Arch系配置代理最简方法 Aya的小爬虫合集 Pipewire尝鲜 Firefox使用侧栏标签页 https://github.com/brx86">
-    <meta name="google-site-verification" content="_EWJaM8G6xwMtEqemO4yN8WqSU2CaKVi3jTj0gLg48E">
     <title>Aya's Notes</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/theme-simple.css" title="Simple">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- <link rel="stylesheet" href="assets/css/main.css"> -->
 
     <!-- Alternate Stylesheets -->
-    <link rel="stylesheet alternate" href="assets/css/theme-defaults.css" title="Defaults">
-    <link rel="stylesheet alternate" href="assets/css/theme-simple-dark.css" title="Simple Dark">
+    <!-- <link rel="stylesheet alternate" href="assets/css/theme-defaults.css" title="Defaults">
+    <link rel="stylesheet alternate" href="assets/css/theme-simple-dark.css" title="Simple Dark"> -->
 
     <!-- Test Stylesheets -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css"> -->
@@ -28,7 +25,7 @@
 
 <body>
     <div id="app"></div>
-
+    <div id="sakana-widget" style="position: fixed; bottom: 10px; right: 20px; z-index: 999;"></div>
     <!-- JavaScript -->
     <script>
         // Docsify
@@ -74,14 +71,12 @@
     <script src="assets/js/prism-bash.min.js"></script>
     <!-- https://cdn.jsdelivr.net/npm/sakana-widget@2.2.2/lib/sakana.min.js -->
     <!-- https://cdnjs.cloudflare.com/ajax/libs/sakana-widget/2.2.2/sakana.min.js -->
-    <div id="sakana-widget" style="position: fixed; bottom: 10px; right: 20px; z-index: 999;"></div>
     <script>
         function initSakanaWidget() {
             new SakanaWidget().setCharacter('takina').mount('#sakana-widget');
         }
     </script>
     <script async onload="initSakanaWidget()" src="assets/js/sakana.min.js"></script>
-
     <link rel="stylesheet" href="assets/css/gitalk.css">
     <script src="assets/js/plugins.gitalk.min.js"></script>
     <script src="assets/js/gitalk.min.js"></script>
@@ -109,55 +104,6 @@
         function onHashChange() {
             props.id = decodeURI(location.hash.split('?')[0]); //如果不切分，在docsify里面的各个段落都会生成新的评论issue
         }
-    </script>
-    <!-- 添加网站运行时间统计 -->
-    <script>
-        function siteTime() {
-            setTimeout(siteTime, 1000);
-            let seconds = 1000;
-            let minutes = seconds * 60;
-            let hours = minutes * 60;
-            let days = hours * 24;
-            let today = new Date();
-            let todayYear = today.getFullYear();
-            let todayMonth = today.getMonth() + 1;
-            let todayDate = today.getDate();
-            let todayHour = today.getHours();
-            let todayMinute = today.getMinutes();
-            let todaySecond = today.getSeconds();
-
-            let t1 = Date.UTC(2020, 08, 4, 0, 0, 0);
-            let t2 = Date.UTC(
-                todayYear,
-                todayMonth,
-                todayDate,
-                todayHour,
-                todayMinute,
-                todaySecond
-            );
-            let diff = t2 - t1;
-            let diffDays = Math.floor(diff / days);
-            let diffHours = Math.floor((diff - diffDays * days) / hours);
-            let diffMinutes = Math.floor(
-                (diff - diffDays * days - diffHours * hours) / minutes
-            );
-            let diffSeconds = Math.floor(
-                (diff - diffDays * days - diffHours * hours - diffMinutes * minutes) /
-                seconds
-            );
-            Docsify.dom.find('.runtime').innerHTML =
-                'Aya\'s Note已运行 ' +
-                diffDays +
-                ' 天 ' +
-                diffHours +
-                ' 小时 ' +
-                diffMinutes +
-                ' 分 ' +
-                diffSeconds +
-                ' 秒';
-        }
-        // 先让网页加载完，否则 Docsify.dom.find('.runtime') == null
-        setTimeout(siteTime, 500);
     </script>
 </body>
 
