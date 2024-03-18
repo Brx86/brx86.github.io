@@ -27,6 +27,17 @@ https://alternativeto.net/
     如果算上aur的话那就是60个字符的
     gnome-shell-extension-control-blur-effect-on-lock-screen-git
 
+#### systemd 服务重定向
+https://www.baeldung.com/linux/redirect-systemd-output-to-file
+```ini
+[Service]
+Type=oneshot
+ExecStart=/bin/...
+...
+StandardOutput=append:/var/log/test.log
+StandardError=append:/var/log/test.log
+```
+
 #### Btrfs关闭指定文件的写时复制(CoW)
 ```shell
 #关闭指定文件的CoW
