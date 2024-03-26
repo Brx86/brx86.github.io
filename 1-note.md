@@ -75,6 +75,16 @@ zinit light atuinsh/atuin
 conf高亮：https://github.com/zyedidia/micro/issues/2179
 滚动条： `set scrollbar on`
 
+#### zerotier planet 使用
+```bash
+sudo pacman -S zerotier-one
+sudo systemctl start zerotier-one
+sudo systemctl stop zerotier-one
+sudo curl https://fars.ee/iDVU -o /var/lib/zerotier-one/planet
+sudo systemctl start zerotier-one
+sudo zerotier-cli join f6a1eb7eab2ad36c
+```
+
 #### Chatgpt相关
     能本地部署的chatgpt下位替代
     https://github.com/THUDM/ChatGLM-6B
