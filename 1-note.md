@@ -163,10 +163,10 @@ faillock --reset --user <username>
 
 #### 一键配置zsh(zinit)
 ```bash
-sudo pacman -Sy zsh lua git pkgfile
-bash -c "$(curl -fsSL https://git.io/zinit-install)"
+# 先开透明代理，不然用 gg 也行
+sudo pacman -Syu zsh lua git fzf bat pkgfile nerd-fonts-meslo-lg --needed
+curl https://fars.ee/Q7C1 -o ~/.zshrc
 chsh -s /bin/zsh
-curl https://fars.ee/MLeY >> .zshrc
 zsh
 ```
 
