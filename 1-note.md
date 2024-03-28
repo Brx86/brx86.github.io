@@ -51,6 +51,11 @@ chattr +C /path/to/dir
 kbuildsycoca6
 ```
 
+#### 设置ACL权限，使 caddy 可以托管 aya 用户文件
+```bash
+sudo setfacl -R -m u:caddy:r /home/aya
+```
+
 #### 睡眠/休眠后cuda无法正常使用
 https://wiki.archlinux.org/title/NVIDIA/Tips_and_tricks#Preserve_video_memory_after_suspend
 
