@@ -46,6 +46,11 @@ chattr +C /path/to/file
 chattr +C /path/to/dir
 ```
 
+#### kde 刷新 .desktop 缓存
+```bash
+kbuildsycoca6
+```
+
 #### 睡眠/休眠后cuda无法正常使用
 https://wiki.archlinux.org/title/NVIDIA/Tips_and_tricks#Preserve_video_memory_after_suspend
 
