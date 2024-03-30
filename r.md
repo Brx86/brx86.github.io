@@ -8,9 +8,13 @@
 
 `r.aya1.de`的源码可以在这里找到 [netptop/siteproxy](https://github.com/netptop/siteproxy)
 
-由于恶意请求过多，免费额度经常被用完，因此对来自中国以外ip的请求加了cf盾，境外的机子应该也不需要这反代吧
+由于恶意请求过多，免费额度经常被用完，因此对来自中国以外ip的请求加了cf质询，境外的机子应该也不需要这反代吧
 
 ## 反向代理使用方法：
+
+<!-- tabs:start -->
+
+#### ** aya1.de **
 
 在链接前加上`https://aya1.de/`，如
 
@@ -20,17 +24,21 @@
 ❯ wget https://aya1.de/https://github.com/alist-org/alist/releases/download/v3.7.2/alist-linux-amd64.tar.gz
 ```
 
-在链接前加上`https://r.aya1.de/`，并去除后面的`:/`，如
+#### ** r.aya1.de **
+
+在链接前加上`https://r.aya1.de/aya/`，并去除后面的`:/`，如
 
 ```bash
-❯ git clone https://r.aya1.de/https/github.com/netptop/siteproxy
+❯ git clone https://r.aya1.de/aya/https/github.com/netptop/siteproxy
 
-❯ wget http://r.aya1.de/https/github.com/alist-org/alist/releases/download/v3.7.2/alist-linux-amd64.tar.gz
+❯ wget http://r.aya1.de/aya/https/github.com/alist-org/alist/releases/download/v3.7.2/alist-linux-amd64.tar.gz
 ```
 
-`r.aya1.de` 同时还可以正常代理大部分网页，详见 [Readme](https://github.com/netptop/siteproxy/blob/master/README.md)
+`r.aya1.de` 同时还可以正常代理大部分网页，详见 [README](https://github.com/netptop/siteproxy/blob/master/README.md)
 
-**注意：** siteproxy使用强制替换字符串的方式代理请求，网页或文本内容中任何匹配的网址都会被套上反代，建议只用于访问简单网页或代理git，用于下载文件时可能出现内容被修改的情况。
+**注意：** ~~siteproxy使用强制替换字符串的方式代理请求，网页或文本内容中任何匹配的网址都会被套上反代，建议只用于访问简单网页或代理git，用于下载文件时可能出现内容被修改的情况。~~ siteproxy2.0 已修复，可放心下载文件。
+
+<!-- tabs:end -->
 
 ## 短网址使用方法：
 1. 直接访问[网页端](https://s.aya1.de/)
@@ -48,8 +56,8 @@
 # 使用curl请求
 ❯ curl https://s.aya1.de -d '{"url": "https://note.aya1.de/#/Arch_For_Aya"}'
 # 返回值：
-{"status":200,"key":"/bPjk7C"}
-# 然后访问 https://aya1.de/bPjk7C 即可
+{"status":200,"key":"/MEDeAz"}
+# 然后访问 https://s.aya1.de/MEDeAz 即可
 ```
 
 ## 或许可能的捐赠（随缘啦）
