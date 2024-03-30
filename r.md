@@ -4,7 +4,7 @@
 
 主要用于下载用途，也可以代理git clone
 
-~~[源码](https://gitlab.com/NickCao/experiments/-/blob/master/workers/r.js)可以在这里获取到~~ `aya1.de`使用的源码作者删库了，这是我的[备份](https://fars.ee/otFV/js)
+~~[源码](https://gitlab.com/NickCao/experiments/-/blob/master/workers/r.js)可以在这里获取到~~ `aya1.de`使用的源码作者删库了，这是我的备份 [旧版](https://fars.ee/otFV/js) [新版](https://fars.ee/r9bO/js)
 
 `r.aya1.de`的源码可以在这里找到 [netptop/siteproxy](https://github.com/netptop/siteproxy)
 
