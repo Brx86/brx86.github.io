@@ -38,6 +38,12 @@ StandardOutput=append:/var/log/test.log
 StandardError=append:/var/log/test.log
 ```
 
+#### WebEngine Wanland 分数缩放 字体模糊 （如 arianna）
+https://bugreports.qt.io/browse/QTBUG-113574
+```bash
+env QT_WAYLAND_DISABLED_INTERFACES=wp_fractional_scale_manager_v1 arianna 
+```
+
 #### Btrfs关闭指定文件的写时复制(CoW)
 ```shell
 #关闭指定文件的CoW
