@@ -20,10 +20,10 @@ arch 下安装的 caddy，如果用 `caddy.service`​ 启动，只能访问 `/v
 * 文件权限相关
 
   ```bash
-  # 修改 /home/aya 的权限
+  # -m 修改 /home/aya 的权限
   sudo setfacl -m u:caddy:rx /home/aya
-  # 递归修改 /home/aya/Downloads 及子目录与文件的权限，以后在其中创建的文件也有同样的属性
-  sudo setfacl -Rm u:caddy:rx /home/aya/Downloads
+  # -R 递归修改 /home/aya/Downloads 及子目录与文件的权限，-d 以后在其中创建的文件也有同样的属性
+  sudo setfacl -Rdm u:caddy:rx /home/aya/Downloads
 
   # 查看权限，测试修改是否有效
   getfacl /home/aya/Downloads
@@ -74,5 +74,10 @@ arch 下安装的 caddy，如果用 `caddy.service`​ 启动，只能访问 `/v
 
 ```bash
 sudo setfacl -m u:caddy:rx /home/aya
-sudo setfacl -Rm u:caddy:rwx /home/aya/Downloads
+sudo setfacl -Rdm u:caddy:rwx /home/aya/Downloads
 ```
+
+---
+
+1. [Arch Wiki：访问控制列表](https://wiki.archlinuxcn.org/wiki/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8)
+2. [五分钟学会 Linux ACL 权限的全部内容](https://cloud.tencent.com/developer/article/1361573)
