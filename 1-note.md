@@ -57,6 +57,12 @@ chattr +C /path/to/dir
 kbuildsycoca6
 ```
 
+#### vscode 插件列表备份
+```bash
+cat ~/.vscode/extensions/extensions.json|jq -r '.[].identifier.id'
+# https://fars.ee/F8z6
+```
+
 #### 设置ACL权限，使 caddy 可以托管 aya 用户文件
 ```bash
 sudo setfacl -R -m u:caddy:r /home/aya
