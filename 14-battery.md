@@ -35,4 +35,4 @@ echo "电池状态: ${energy_status}"
 ```
 
 ## 效果：
-![图 1](/pic/14.1.png)
+![图 1](/pic/14.1.webp)

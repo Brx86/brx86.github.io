@@ -14,38 +14,38 @@ Demo地址：https://git.aya1.de/
 
 没什么好说的，有手就行
 
-![图 1](/pic/8.1.png)  
+![图 1](/pic/8.1.webp)  
 
 ## 创建Workers
 
 注册完会让你添加网站，这步可以跳过，直接点左上角进入主站，点击右侧Workers
 
-![图 2](/pic/8.2.png)  
+![图 2](/pic/8.2.webp)  
 
 设置你的个人子域名，选择免费计划，每天10w次调用上限对于个人绝对够用了
 
-![图 3](/pic/8.3.png)  
+![图 3](/pic/8.3.webp)  
 
 查收你的邮件
 
-![图 4](/pic/8.4.png)  
+![图 4](/pic/8.4.webp)  
 
 点击邮件里的链接，验证成功，进入Workers面板，点击“创建Workers”开始你的第一个Workers
 
-![图 5](/pic/8.5.png)  
+![图 5](/pic/8.5.webp)  
 
 ## 部署Workers
 
-![图 6](/pic/8.6.png)  
+![图 6](/pic/8.6.webp)  
 
 全选复制粘贴[github.js](https://cdn.jsdelivr.net/gh/Brx86/cf-workers-js@main/github.js)代码到左侧脚本栏，点击左上角自定义Workers名，然后“保存并部署”
 
-![图 7](/pic/8.7.png)  
+![图 7](/pic/8.7.webp)  
 
 稍等片刻，点击左上角箭头后退到上一层页面，可以看到网站已经部署好了，点击链接即可访问
 
-![图 8](/pic/8.8.png)  
+![图 8](/pic/8.8.webp)  
 
-![图 9](/pic/8.9.png)  
+![图 9](/pic/8.9.webp)  
 
 同理，另一个项目 [netptop/siteproxy](https://github.com/netptop/siteproxy) 的部署方法也是一样的，详见项目主页
