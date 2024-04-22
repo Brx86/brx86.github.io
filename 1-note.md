@@ -2,15 +2,15 @@
 
 #### arco镜像站  https://ant.seedhost.eu/arcolinux/iso/
 
-#### vbox隐藏菜单栏 HostKey + Home
+#### Perl一行式 https://www.junmajinlong.com/perl/index/#Perl一行式程序
 
-#### win精简版 https://www.winos.me/windows10/
+#### win精简版  https://www.winos.me/windows10/
 
-#### 自用win10 https://windsys.win/ https://latest10.win/
+#### 自用win10  https://windsys.win/ https://latest10.win/
 
-#### 浏览器P2P传文件 https://www.ppzhilian.com/
+#### 浏览器P2P传文件  https://www.ppzhilian.com/
 
-#### 火萤动态壁纸 http://bbs.huoying666.com/forum-53-1.html  
+#### 火萤动态壁纸  http://bbs.huoying666.com/forum-53-1.html  
 
 #### 一个替代软件查找网站(强烈推荐)
 
