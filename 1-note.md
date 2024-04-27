@@ -38,6 +38,18 @@ StandardOutput=append:/var/log/test.log
 StandardError=append:/var/log/test.log
 ```
 
+#### 等宽字体 ~/.config/fontconfig/fonts.conf
+```xml
+ <match target="pattern">
+     <test qual="any" name="family">
+         <string>monospace</string>
+     </test>
+     <edit name="family" mode="prepend" binding="strong">
+         <string>MesloLGS NF</string>
+     </edit>
+ </match>
+```
+
 #### WebEngine Wanland 分数缩放 字体模糊 （如 arianna）
 https://bugreports.qt.io/browse/QTBUG-113574
 ```bash
