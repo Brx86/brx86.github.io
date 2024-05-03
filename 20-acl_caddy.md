@@ -10,20 +10,19 @@ arch 下安装的 caddy，如果用 `caddy.service`​ 启动，只能访问 `/v
 
 > ACL 的全称是 Access Control List (**访问控制列表**) ，一个针对文件/目录的访问控制列表。它在 UGO 权限管理的基础上为**文件系统**提供一个额外的、更灵活的权限管理机制。它被设计为 UNIX 文件权限管理的一个补充。ACL 允许你给任何的用户或用户组设置任何文件/目录的访问权限。
 
-需求：
-
-让 caddy 的 `file_server`​​ ​可以处理 aya 家目录下的 `Downloads`​​​ 文件夹，
-即 `/home/aya/Downloads`​​​
+需求：让 caddy 的 `file_server`​​ ​可以处理 aya 家目录下的 `Downloads`​​​ 文件夹，即 `/home/aya/Downloads`​​​
 
 ## 实际操作
 
 * 文件权限相关
 
   ```bash
-  # -m 修改 /home/aya 的权限
+  # -m (modify) 修改 /home/aya 的权限
   sudo setfacl -m u:caddy:rx /home/aya
-  # -R 递归修改 /home/aya/Downloads 及子目录与文件的权限，-d 以后在其中创建的文件也有同样的属性
-  sudo setfacl -Rdm u:caddy:rx /home/aya/Downloads
+  # -R (recursive) 递归修改 /home/aya/Downloads 及子目录与文件的权限
+  # -d (default) 以后在其中创建的文件也有同样的属性
+  sudo setfacl -Rm u:caddy:rx /home/aya
+  sudo setfacl -Rdm u:caddy:rwx /home/aya/Downloads
 
   # 查看权限，测试修改是否有效
   getfacl /home/aya/Downloads
@@ -64,20 +63,28 @@ arch 下安装的 caddy，如果用 `caddy.service`​ 启动，只能访问 `/v
 
 ## 一点小问题
 
-发现启用 ACL 权限时，如果给家目录写权限，会导致不能通过密钥登录 ssh
+* 发现启用 ACL 权限时，如果给家目录写权限，会导致不能通过密钥登录 ssh
 
-命令：`sudo setfacl -m u:caddy:rwx /home/aya/`​
+  命令：`sudo setfacl -m u:caddy:rwx /home/aya/`​​
 
-原因：这条命令会使得 caddy 用户可以更改 `/home/aya/.ssh`​ 目录，被认为不安全
+  原因：这条命令会使得 caddy 用户可以更改 `/home/aya/.ssh`​​ 目录，被认为不安全
 
-解决方法（暂定）：如果有写入需求，只给需要的特定目录写权限，示例如下：
+  解决方法：如果有写入需求，只给需要的特定目录写权限，示例如下：
 
-```bash
-sudo setfacl -m u:caddy:rx /home/aya
-sudo setfacl -Rdm u:caddy:rwx /home/aya/Downloads
-```
+  ```bash
+  sudo setfacl -m u:caddy:rx /home/aya
+  sudo setfacl -Rm u:caddy:rwx /home/aya/Downloads
+  ```
 
----
+* 发现目录下新建的文件并没有继承属性
 
-1. [Arch Wiki：访问控制列表](https://wiki.archlinuxcn.org/wiki/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8)
-2. [五分钟学会 Linux ACL 权限的全部内容](https://cloud.tencent.com/developer/article/1361573)
+  命令：`sudo setfacl -Rm u:caddy:rx /home/aya/Downloads`​
+
+  原因：应该设置 default
+
+  解决方法：修改权限后再添加默认权限
+  
+  ```bash
+  sudo setfacl -Rm u:caddy:rx /home/aya
+  sudo setfacl -Rdm u:caddy:rwx /home/aya/Downloads
+  ```
