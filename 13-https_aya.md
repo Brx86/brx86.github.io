@@ -9,7 +9,8 @@
 acme.sh --set-default-ca --server letsencrypt
 ```
 
-### 使用域名商api [DNS-api-mode](https://github.com/acmesh-official/acme.sh/wiki/How-to-issue-a-cert#4-dns-api-mode)
+### 使用域名商api
+[DNS-api-mode](https://github.com/acmesh-official/acme.sh/wiki/How-to-issue-a-cert#4-dns-api-mode)
 ```bash
 # 设置 api key，如cloudflare：https://dash.cloudflare.com/profile/api-tokens
 export CF_Key='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
@@ -18,7 +19,8 @@ export CF_Email='example@example.com'
 acme.sh --issue --dns dns_cf -d "mydomain.com" -d "*.mydomain.com"
 ```
 
-### 不使用域名商api，手动模式 [DNS-manual-mode](https://github.com/acmesh-official/acme.sh/wiki/DNS-manual-mode)
+### 不使用域名商api，手动模式
+[DNS-manual-mode](https://github.com/acmesh-official/acme.sh/wiki/DNS-manual-mode)
 ```bash
 # 运行命令，根据提示在 dns 后台修改 txt 解析
 acme.sh --issue --dns -d mydomain.com --yes-I-know-dns-manual-mode-enough-go-ahead-please

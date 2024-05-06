@@ -51,13 +51,13 @@ https://my.domain.com:2000 {
 
 此时，访问 http(s)://my.domain.com 时，实际访问路径为 `本机 -> Cloudflare -> 服务器IP:2000 -> Cloudflare -> 本机`​，满足需求。
 
-缺点：所有请求走 Cloudflare 代理，对于国内服务器实际会减速。如果不需要 CDN，希望直连访问服务器，可以参考 [《国内服务器搭建网站绕过备案（伪）》](/#/13-https_aya)
+缺点：所有请求走 Cloudflare 代理，对于国内服务器实际会减速。如果不需要 CDN，希望直连访问服务器，可以参考 [《国内服务器搭建网站绕过备案（伪）》](13-https_aya)
 
 ## 参考：
 
 1. [Cloudflare Docs: Network ports](https://developers.cloudflare.com/fundamentals/reference/network-ports/)
 2. [Cloudflare Blog: Where to? Introducing Origin Rules](https://blog.cloudflare.com/origin-rules)
 3. [Cloudflare Docs: Origin Rules](https://developers.cloudflare.com/rules/origin-rules/)
-4. [国内服务器搭建网站绕过备案（伪）](/#/13-https_aya)
+4. [国内服务器搭建网站绕过备案（伪）](13-https_aya)
 
 ‍
