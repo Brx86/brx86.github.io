@@ -11,6 +11,7 @@
 - [使用AutoKey在Vscode-QQ快速发送图片](10-vscodeqq)
 - [Aya的小爬虫合集](11-pybili)
 - [Pipewire尝鲜](12-pipewire)
+- [iframe 绕过备案（伪）](13-https_aya)
 - [拯救者设置电池充电阈值](14-battery)
 - [AMD CPU 调频](15-amd-cpufreq)
 - [v2raya自动选择节点脚本](16-autoaya)
@@ -18,6 +19,7 @@
 - [Linux应用墓碑](18-xstop)
 - [EXE 转 SWF](19-exe2swf)
 - [ACL 权限与 Caddy](20-acl_caddy)
+- [Origin Rules 绕过备案](21-cf_origin_rules)
 
 - **Links**
 - [![Github](assets/img/github.svg)Github](https://github.com/brx86)
