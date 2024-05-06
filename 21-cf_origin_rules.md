@@ -20,8 +20,6 @@
 
 **需求：** 在打开 https://my.domain.com 时，经过 Cloudflare 代理隐藏服务器真实 IP，访问到国内服务器 2000 端口的网站。
 
----
-
 ## 实际操作：
 
 ### 1. 添加 DNS 解析
@@ -32,7 +30,7 @@
 
 打开 ​[Cloudflare 面板](https://dash.cloudflare.com) ，进入 ​`域名管理-规则-Origin Rules`​ ，创建规则：
 
-示例：![sc_20240506_185245](assets/sc_20240506_185245-20240506185123-n8ntxdu.webp)​
+示例：![sc_20240506_185245](pic/21.1.webp)​
 
 ### 3. 在服务器上开启网站
 
