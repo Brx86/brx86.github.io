@@ -16,7 +16,7 @@ paru -S micromamba-bin
 ## 2. 配置 shellrc
 
 ```bash
-# 初始化，-s 后填自己使用的 shell ，-p 后填虚拟环境的保存路径，默认为 ~/micromamba
+# 初始化，--shell 后填自己使用的 shell ，--prefix 后填虚拟环境的保存路径，默认为 ~/micromamba
 micromamba shell init -s zsh -p ~/.local/share/micromamba
 # 习惯 conda 命令 ，alias 一下
 echo 'alias conda=micromamba' >> ~/.zshrc
@@ -37,7 +37,7 @@ custom_channels:
   pytorch: https://mirrors.bfsu.edu.cn/anaconda/cloud
 ```
 
-## 4. 创建新环境测试
+## 4. 创建新环境测试（如果在aur装的，已经测试过了，可以跳过此步）
 
 ```bash
 conda create -n py311 python=3.11
@@ -47,10 +47,17 @@ python -V
 
 ## 在其他系统使用 micromamba
 
+手动安装
 ```bash
 cd /tmp
-wget https://api.anaconda.org/download/conda-forge/micromamba/1.3.1/linux-64/micromamba-1.3.1-0.tar.bz2 -O-|tar jxvf - bin/micromamba
-sudo mv bin/micromamba /usr/local/bin
+wget https://micro.mamba.pm/api/micromamba/linux-64/latest -O-|tar jxvf - bin/micromamba
+sudo install -m755 bin/micromamba /usr/local/bin
+```
+
+官方安装脚本 （推荐）
+https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html
+```bash
+"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 ```
 
 接下来同上 2 3 4 步。
