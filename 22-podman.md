@@ -66,7 +66,7 @@
 
 ```ini
 # 用户级 rootless 容器的配置文件生成到 ~/.config/containers/systemd/alist.container
-# 以管理员权限运行，则生成到 /usr/share/containers/systemd/alist.container
+# 以管理员权限运行 podlet ，则生成到 /usr/share/containers/systemd/alist.container ，也可以手动放在 /etc/containers/systemd/ 里
 [Container]
 ContainerName=alist
 Environment=PUID=1000 PGID=1000 UMASK=022
@@ -94,9 +94,9 @@ ContainerName=alist
 Environment=PUID=1000 PGID=1000 UMASK=022
 Image=xhofe/alist:latest
 PublishPort=5244:5244
-# 挂载路径必须是绝对路径
-Volume=/home/aya/stacks/alist/config:/opt/alist/data
-Volume=/home/aya/stacks/alist/downloads:/downloads
+# 挂载路径不能使用 ~ ，$HOME 和相对路径，但可以使用 systemd 说明符，如 %h 指代家目录
+Volume=%h/stacks/alist/config:/opt/alist/data
+Volume=%h/stacks/alist/downloads:/downloads
 
 [Service]
 Restart=always
@@ -137,4 +137,4 @@ systemctl --user enable podman-auto-update.timer --now
 3. [Podman Docs: podman-systemd.unit.5](https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html)
 4. [Quadlets might make me finally stop using docker-compose](https://major.io/p/quadlets-replace-docker-compose/)
 5. [GitHub: containers/podlet](https://github.com/containers/podlet)
-
+6. [Systemd Specifiers](https://www.freedesktop.org/software/systemd/man/latest/systemd.unit.html#Specifiers)
