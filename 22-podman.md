@@ -49,6 +49,22 @@
    > https://github.com/containers/podman-compose/issues/166
 
    但我用起来有问题，没法在 podman-compose.yaml 里设置，issue 里提到的选项也失效了。最终解决方法：设置 ACL 权限 凑合用吧。
+8. rootless 模式无法访问 host 网络
+
+   失效老文档：~~https://podmancn.pages.dev/docs/tutorials/basic_networking#%E7%A4%BA%E4%BE%8B-2~~
+
+   原因：podman 5.0 后默认使用 `pasta` ​替代了 `slirp4netns`​ https://bbs.archlinux.org/viewtopic.php?id=296042
+
+   解决方法：https://github.com/containers/podman/issues/22771
+
+   ```ini
+   # ~/.config/containers/containers.conf 写入
+   [network]
+   default_rootless_network_cmd="pasta"
+   pasta_options = ["--map-gw"]
+   ```
+
+   或在容器内 `cat /etc/hosts`​ 查看，使用 wg 或 zt 的本机 ip 指代主机
 
 ## 使用 Quadlet 管理容器，实现开机自启和自动更新
 
