@@ -27,6 +27,9 @@ https://alternativeto.net/
     如果算上aur的话那就是60个字符的
     gnome-shell-extension-control-blur-effect-on-lock-screen-git
 
+#### Firefox 自定义搜索引擎
+browser.urlbar.update2.engineAliasRefresh = true
+
 #### systemd 服务重定向
 https://www.baeldung.com/linux/redirect-systemd-output-to-file
 ```ini
