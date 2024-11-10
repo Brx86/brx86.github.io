@@ -30,6 +30,13 @@ https://alternativeto.net/
 #### Firefox 自定义搜索引擎
 browser.urlbar.update2.engineAliasRefresh = true
 
+#### MPV 播放 HDR/杜比 视频偏色
+mpv.conf
+```ini
+vo=gpu-next
+gpu-context=win
+```
+
 #### systemd 服务重定向
 https://www.baeldung.com/linux/redirect-systemd-output-to-file
 ```ini
