@@ -30,6 +30,9 @@ https://alternativeto.net/
 #### Firefox 自定义搜索引擎
 browser.urlbar.update2.engineAliasRefresh = true
 
+#### windows 版 dolphin
+https://cdn.kde.org/ci-builds/system/dolphin/master/windows/
+
 #### MPV 播放 HDR/杜比 视频偏色
 mpv.conf
 ```ini
