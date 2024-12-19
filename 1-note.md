@@ -33,6 +33,15 @@ browser.urlbar.update2.engineAliasRefresh = true
 #### windows 版 dolphin
 https://cdn.kde.org/ci-builds/system/dolphin/master/windows/
 
+#### win 删除右键菜单“全部解压缩”
+```reg
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
+"{b8cdcb65-b1bf-4b42-9428-1dfdb7ee92af}"="Compressed (zipped) Folder Menu"
+"{EE07CEF5-3441-4CFB-870A-4002C724783A}"="Compressed Archive Folder Context Menu"
+```
+
 #### MPV 播放 HDR/杜比 视频偏色
 mpv.conf
 ```ini
