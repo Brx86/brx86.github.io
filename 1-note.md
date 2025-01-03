@@ -42,6 +42,12 @@ Windows Registry Editor Version 5.00
 "{EE07CEF5-3441-4CFB-870A-4002C724783A}"="Compressed Archive Folder Context Menu"
 ```
 
+#### ncat(nmap附带)端口转发
+```bash
+# 0.0.0.0:7891 -> 10.0.0.2:7890
+ncat -c "ncat 10.0.0.2 7890" -l 7891
+```
+
 #### MPV 播放 HDR/杜比 视频偏色
 mpv.conf
 ```ini
