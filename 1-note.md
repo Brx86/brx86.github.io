@@ -191,8 +191,13 @@ sudo usermod -a -G disk $USER
 sudo usermod -a -G vboxusers $USER
 ```
 
-#### CapsLock 自定义
-在 `.xprofile` 添加：
+#### CapsLock 自定义实例
+对于 68 配列，将 CapsLock 映射到 \`\~ 键，可以在 `.Xmodmap` 添加：
+```
+clear lock
+keycode 66 = grave asciitilde NoSymbol NoSymbol
+```
+映射到 Esc 等键，可以在 ``.xprofile` 添加：
 ```bash
 # 完整可用映射列表见 /usr/share/X11/xkb/rules/evdev.lst
 # 交换capslock与esc
