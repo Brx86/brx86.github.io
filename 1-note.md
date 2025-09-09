@@ -27,6 +27,11 @@ https://alternativeto.net/
     如果算上aur的话那就是60个字符的
     gnome-shell-extension-control-blur-effect-on-lock-screen-git
 
+#### docker network 自定义名称
+```
+docker network create --driver bridge --opt "com.docker.network.bridge.name=inet" inet
+```
+
 #### Firefox 自定义搜索引擎
 browser.urlbar.update2.engineAliasRefresh = true
 
@@ -53,6 +58,11 @@ mpv.conf
 ```ini
 vo=gpu-next
 gpu-context=win
+```
+
+#### systemd 一次性定时关机
+```bash
+sudo systemd-run --on-calendar="2025-05-02 07:00:00" --unit "shutdown-once" /usr/bin/systemctl poweroff
 ```
 
 #### systemd 服务重定向
