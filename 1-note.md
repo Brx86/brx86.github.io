@@ -35,6 +35,11 @@ docker network create --driver bridge --opt "com.docker.network.bridge.name=inet
 #### Firefox 自定义搜索引擎
 browser.urlbar.update2.engineAliasRefresh = true
 
+#### Magick 批量转换图片
+```
+magick mogrify -format webp */*.png
+```
+
 #### windows 版 dolphin
 https://cdn.kde.org/ci-builds/system/dolphin/master/windows/
 
