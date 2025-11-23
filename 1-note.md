@@ -27,6 +27,11 @@ https://alternativeto.net/
     如果算上aur的话那就是60个字符的
     gnome-shell-extension-control-blur-effect-on-lock-screen-git
 
+#### Scrcpy 只传输音频，无窗口和控制
+```
+scrcpy --no-video --no-control --audio-codec=flac --no-window
+```
+
 #### docker network 自定义名称
 ```
 docker network create --driver bridge --opt "com.docker.network.bridge.name=inet" inet
