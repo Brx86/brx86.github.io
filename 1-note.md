@@ -38,7 +38,14 @@ docker network create --driver bridge --opt "com.docker.network.bridge.name=inet
 ```
 
 #### Firefox 自定义搜索引擎
+```
 browser.urlbar.update2.engineAliasRefresh = true
+```
+
+#### Flatpak Telegram 按钮跳转 Firefox 失败
+```
+flatpak override --user org.mozilla.firefox --env=MOZ_DBUS_REMOTE=1
+```
 
 #### Magick 批量转换图片
 ```
