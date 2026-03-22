@@ -47,6 +47,15 @@ browser.urlbar.update2.engineAliasRefresh = true
 flatpak override --user org.mozilla.firefox --env=MOZ_DBUS_REMOTE=1
 ```
 
+#### Flatpak Steam 调用 Fcitx5 输入法
+```
+flatpak override --user com.valvesoftware.Steam \
+                      --filesystem=xdg-run/fcitx \
+                      --env=GTK_IM_MODULE=fcitx \
+                      --env=QT_IM_MODULE=fcitx \
+                      --env=XMODIFIERS=@im=fcitx
+```
+
 #### Magick 批量转换图片
 ```
 magick mogrify -format webp */*.png
